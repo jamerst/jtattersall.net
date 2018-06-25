@@ -1,0 +1,71 @@
+body {
+    background-color: white;
+}
+
+/*####PAGE COMPONENTS####*/
+
+header {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .25);
+}
+
+main {
+    background-color: #F5F5F5;
+}
+
+nav {
+    color: white;
+}
+
+nav a:link {
+    color: white;
+}
+
+/*####CENTER WINDOW LAYOUT####*/
+
+.center-window {
+    background-color: #F5F5F5;
+}
+
+/*####HYPERLINK STYLING####*/
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: #616161;
+}
+
+/*####FORMS####*/
+
+input[type=checkbox]:before {
+    background-color: #616161;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=number] {
+    color: black;
+    border-bottom: solid #616161 1px;
+    background-color: #F5F5F5;
+}
+
+select {
+    color: black;
+    border-bottom: solid #616161 1px;
+    background-color: #F5F5F5;
+}
+
+/*####TABLES####*/
+
+th, td {
+    border-bottom: 1px solid #757575;
+}
+
+tbody tr:hover {
+    background-color: #E0E0E0;
+}
+
+/*####SUMMARY####*/
+
+.summary-welcome-panel {
+    background-color: #F5F5F5;
+}

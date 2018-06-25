@@ -1,0 +1,77 @@
+body {
+    color: white;
+    background-color: #212121;
+}
+
+/*####PAGE COMPONENTS####*/
+
+header {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .40);
+}
+
+main {
+    background-color: #424242;
+}
+
+/*####CENTER WINDOW LAYOUT####*/
+
+.center-window {
+    background-color: #424242;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .50);
+}
+
+/*####HYPERLINK STYLING####*/
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: #BDBDBD;
+}
+
+/*####FORMS####*/
+
+input[type=checkbox]:before {
+    background-color: white;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=number] {
+    color: white;
+    border-bottom: solid #616161 1px;
+    background-color: #424242;
+}
+
+select {
+    color: white;
+    border-bottom: solid #616161 1px;
+    background-color: #424242;
+}
+
+/*####TABLES####*/
+
+th, td {
+    border-bottom: 1px solid #BDBDBD;
+}
+
+tbody tr:hover {
+    background-color: #616161;
+}
+
+/*####SUMMARY####*/
+
+.summary-welcome-panel {
+    background-color: #424242;
+}
+
+svg text {
+    fill: white;
+}
+
+.tutorial-box {
+    background-color: #616161;
+}
+
+.tutorial-index {
+    color: black;
+}
