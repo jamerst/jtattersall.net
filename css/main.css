@@ -15,6 +15,7 @@ h1 {
 }
 
 h2 {
+    font-size: 175%;
     font-weight: 500;
 
     margin: 0;
@@ -33,6 +34,11 @@ p {
     font-size: 120%;
     margin-top: 0;
     padding-top: 0;
+    margin-bottom: 1em;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 label {
@@ -56,7 +62,7 @@ header {
     text-align: center;
 
     color: white;
-    background-color: #1565C0;
+    background-color: #3F51B5;
 
     align-items: center;
     justify-content: center;
@@ -91,6 +97,8 @@ nav {
     min-width: 40%;
 
     justify-content: center;
+
+    margin-top: 1em;
 }
 
 nav ul {
@@ -117,14 +125,12 @@ nav li {
 
     transition: .25s;
 
-    background-color: #1565C0;
-
     flex: 1;
 }
 
 nav li:hover {
     color: white;
-    background-color: #1976D2;
+    background-color: #5C6BC0;
 }
 
 nav li a {
@@ -181,7 +187,7 @@ footer {
     display: flex;
     flex-direction: column;
 
-    width: 50vw;
+    width: 60vw;
     margin-bottom: 2vmin;
     padding: 2vmin;
     padding-top: 0;
@@ -215,33 +221,94 @@ footer {
     width: 100%;
 }
 
-.contact-entry {
-    font-size: 120%;
-    margin-bottom: 0.75em;
-}
-
-.contact-entry i {
-    margin-right: 0.5em;
-}
-
-.contact-entry:last-of-type {
-    margin-bottom: 0;
-}
-
 .header-email {
     margin-top: 0.5em;
     font-size: 150%;
 }
 
-.project-entry {
-    width: 90%;
-
-    border: 0.1em solid #BDBDBD;
-    border-radius: 0.25em;
-
-    display: flex;
+.header-email i {
+    margin-right: 0.5em;
 }
 
+.links {
+    font-size: 300%;
+}
+
+.links i {
+    margin: 0.5em;
+}
+
+.links i:hover {
+    color: #3F51B5;
+    transition: .3s;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+
+.project-entry {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .50);
+    width: 24em;
+    padding-top: 1em;
+}
+
+.project-entry:hover {
+    background-color: #EEEEEE;
+    transition: .3s;
+}
+
+.project-content {
+    background-color: #3F51B5;
+    color: white;
+    padding: 1em;
+}
+
+.project-content h2 {
+    margin-bottom: 0.3em;
+}
+
+.project-img img {
+    max-width: 22em;
+    height: auto;
+
+    min-height: 15em;
+    max-height: 15em;
+}
+
+.project-tags {
+    background-color: #5C6BC0;
+}
+
+.project-tags ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0.5em;
+}
+
+.project-tags li {
+    background-color: #7986CB;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0.2em;
+    color: white;
+    border-top-left-radius: 1.5em 100%;
+    border-bottom-left-radius: 1.5em 100%;
+    border-top-right-radius: 1.5em 100%;
+    border-bottom-right-radius: 1.5em 100%;
+
+    font-size: 90%;
+}
 /*####HYPERLINK STYLING####*/
 
 a:hover {

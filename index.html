@@ -6,17 +6,19 @@
 
     <title>James Tattersall</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <link href="css/reset.css" type="text/css" rel="stylesheet"/>
     <link href="css/main.css" type="text/css" rel="stylesheet"/>
     <link href="css/main_light.css" type="text/css" rel="stylesheet"/>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 <body>
 <header class="main-header">
     <h1>James Tattersall</h1>
     <h2>Aspiring Web &amp; Native App Designer</h2>
-    <div class="contact-entry header-email">
+    <div class="header-email">
         <i class="fa fa-envelope"></i><a href="mailto:contact@jtattersall.net">contact@jtattersall.net</a>
     </div>
     <nav>
@@ -31,37 +33,122 @@
 <div class="page-content">
     <div class="center-window" id="about">
         <header><h2>About Me</h2></header>
-        <p>I am a current Computer Science student at the University of Warwick, with a keen interest in developing a variety of different applications, particularly web applications. I enjoy using technology in general, and I pursue this in my spare time through personal projects and university societies, including the <a href="https://radio.warwick.ac.uk/">student radio</a>, of which I am part of the technical team, where I develop and maintain the various systems, and the <a href="http://warwicktechcrew.co.uk/">technical theatre</a> society, where I perform a wide variety of roles for the many shows produced by other student societies each year.</p>
+        <p>I am a first year Computer Science student at the University of Warwick, with a keen interest in developing a variety of different applications, particularly web applications. I enjoy using technology in general, and I pursue this in my spare time through personal projects and university societies, including the <a href="https://radio.warwick.ac.uk/">student radio</a>, of which I am part of the technical team, where I develop and maintain the various systems, and the <a href="http://warwicktechcrew.co.uk/">technical theatre</a> society, where I perform a wide variety of behind-the-scenes roles for the many shows produced by other student societies each year.</p>
 
         <p>I have experience in several languages, including Java, PHP, C, Python, Visual Basic, Javascript &amp; jQuery and HTML/CSS, and I am able to quickly become proficient in almost any language or framework. I also have experience in a wide variety of other areas, such as GNU/Linux, computer hardware, LaTeX, Git, Adobe products and office suites.</p>
-    </div>
-</div>
 
-<div class="page-content">
+        <div class="links">
+            <a href="https://github.com/jamerst"><i class="fab fa-github"></i></a>
+            <a href="https://gitlab.com/jamerst"><i class="fab fa-gitlab"></i></a>
+            <a href="https://www.linkedin.com/in/james-tattersall/"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
     <div class="center-window" id="projects">
         <header><h2>Projects</h2></header>
-        <div class="project-entry">
-            <h2>Bill Splitter: CS139 Coursework</h2>
+        <div class="projects-container">
+            <div class="project-entry">
+                <div class="project-img">
+                    <img src="img/bill_ninja.svg">
+                </div>
+                <div class="project-content">
+                    <h2>Bill Ninja</h2>
+                    A PHP web app for students splitting bills in shared housing. Created as coursework for CS139 Web Development Technologies module.
+                </div>
+                <div class="project-tags">
+                    <ul>
+                        <li>PHP</li>
+                        <li>Javascript & jQuery</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-entry">
+                <div class="project-img">
+                    <img src="img/wirus.png">
+                </div>
+                <div class="project-content">
+                    <h2>Wirus</h2>
+                    A Java project to efficiently perform various tasks with a large data set for CS126 Design of Information Structures coursework.
+                </div>
+                <div class="project-tags">
+                    <ul>
+                        <li>Java</li>
+                        <li>Data Structures</li>
+                        <li>Searching & Sorting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-entry">
+                <div class="project-img">
+                    <img src="img/robot_maze.png">
+                </div>
+                <div class="project-content">
+                    <h2>Robot Maze</h2>
+                    A Java project to guide a robot through a virtual maze for CS118 Programming for Computer Scientists coursework.
+                </div>
+                <div class="project-tags">
+                    <ul>
+                        <li>Java</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-entry">
+                <div class="project-img">
+                    <img src="img/autobright.png">
+                </div>
+                <div class="project-content">
+                    <h2>AutoBright</h2>
+                    A Windows application to dim monitor backlights on a schedule determined by sunrise/sunset times via DDC/CI.
+                </div>
+                <div class="project-tags">
+                    <ul>
+                        <li>Visual Basic</li>
+                        <li>DDC/CI</li>
+                        <li>Windows APIs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-entry">
+                <div class="project-img">
+                    <img src="img/cuebright.png">
+                </div>
+                <div class="project-content">
+                    <h2>CueBright</h2>
+                    A Windows application to control the colour and brightness of a Corsair CUE-enabled keyboard using command-line arguments.
+                </div>
+                <div class="project-tags">
+                    <ul>
+                        <li>Visual Basic</li>
+                        <li>3rd Party APIs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-entry">
+                <div class="project-img">
+                    <img src="img/easy_get_iplayer.png">
+                </div>
+                <div class="project-content">
+                    <h2>easy_get_iplayer</h2>
+                    A Windows application to provide an easy-to-use GUI for the get_iplayer project, intended for use as a physical recorder alternative.
+                </div>
+                <div class="project-tags">
+                    <ul>
+                        <li>Visual Basic</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="page-content" id="links">
-    <div class="center-window">
+    <div class="center-window" id="links">
         <header><h2>Links</h2></header>
-
-
-        <div class="contact-entry">
-            <i class="fab fa-github"></i><a href="https://github.com/jamerst">github.com/jamerst</a>
-        </div>
-
-        <div class="contact-entry">
-            <i class="fab fa-gitlab"></i><a href="https://gitlab.com/jamerst">gitlab.com/jamerst</a>
-        </div>
-
-        <div class="contact-entry">
-            <i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/james-tattersall/">linkedin.com/in/james-tattersall/</a>
-        </div>
     </div>
 </div>
 
