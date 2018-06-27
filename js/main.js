@@ -3,7 +3,7 @@ $(document).ready(function () {
         $(".cover").fadeOut(300, function () {
             $(".cover").remove();
         })
-    })
+    });
 
     $(".project-entry").click(function () {
        $("body").append(`<div class="cover">
