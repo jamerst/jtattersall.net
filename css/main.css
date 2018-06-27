@@ -303,7 +303,7 @@ footer {
 
     align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 
@@ -357,7 +357,7 @@ footer {
     margin: .5em;
 
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .project-tags li {
