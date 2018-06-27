@@ -344,7 +344,6 @@ footer {
     width: auto;
     max-width: 20em;
     height: 15em;
-
     padding: 1em 0;
 }
 
@@ -465,6 +464,13 @@ footer {
 
     .center-window {
         width: 90vw;
+        margin-bottom: 1em;
+        padding: 0 .5em .5em .5em;
+    }
+
+    .center-window header {
+        margin-bottom: 1em;
+        padding: .5em;
     }
 
     .center-window header h2 {
@@ -485,5 +491,17 @@ footer {
 
     .page-content-center .center-window {
         font-size: 80%;
+    }
+
+    footer {
+        font-size: 65%;
+    }
+
+    .footer-left {
+        padding-left: 1em;
+    }
+
+    .footer-right {
+        padding-right: 1em;
     }
 }
