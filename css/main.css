@@ -195,10 +195,6 @@ footer {
     margin: .5em 0;
 }
 
-.footer-source a {
-    display: block;
-}
-
 .footer-source a:link, .footer-right a:link {
     color: white;
 }
