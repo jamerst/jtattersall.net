@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>easy_get_iplayer</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <link href="../../css/reset.css" type="text/css" rel="stylesheet"/>
+    <link href="../../css/main.css" type="text/css" rel="stylesheet"/>
+    <link href="../../css/main_light.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<header class="main-header">
+    <h1>James Tattersall</h1>
+    <nav>
+        <ul>
+            <li><a href="../../index.html#projects">Back to Projects</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="page-content">
+    <div class="center-window">
+        <header><h2>easy_get_iplayer</h2></header>
+        <p>easy_get_iplayer was my first real project, and as a result is a little rough around the edges. I created it because my parents wanted to save content from BBC iPlayer like you would with a VCR or other physical medium, but in an easily-accessible digital format. <a href="https://github.com/get-iplayer/get_iplayer">get_iplayer</a> is perfect for this, however its main interface is command line based, which would not be suitable for my parents to use, and I found the web-based PVR to also be a little too tricky for them to use, so instead I created my own simpler GUI for get_iplayer.</p>
+
+        <p>easy_get_iplayer is relatively simple underneath, it just takes the necessary options, such as the programme to be downloaded, the quality and destination, and sends this data to get_iplayer which performs all the processing. The main disadvantage of this is that it is difficult to get feedback on the download process, so a big problem with it is that often no error feedback can be given. Another issue is that the file size estimates given by get_iplayer are often very wrong in my experience, which causes further issues when displaying the download percentage.</p>
+
+        <p>Source code and binaries are available on my GitHub <a href="https://github.com/jamerst/easy_get_iplayer_2.0">here</a>, although it hasn't been updated in almost a year, and so is likely to no longer work or be useful.</p>
+    </div>
+</div>
+</body>
+</html>

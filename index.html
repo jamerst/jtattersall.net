@@ -13,11 +13,15 @@
     <link href="css/main.css" type="text/css" rel="stylesheet"/>
     <link href="css/main_light.css" type="text/css" rel="stylesheet"/>
 
+    <script src="lib/jquery-3.3.1.min.js"></script>
+
+    <script src="js/main.js"></script>
+
 </head>
 <body>
 <header class="main-header">
     <h1>James Tattersall</h1>
-    <h2>Aspiring Web &amp; Native App Designer</h2>
+    <h2>Aspiring Web &amp; Native App Developer</h2>
     <div class="header-email">
         <i class="fa fa-envelope"></i><a href="mailto:contact@jtattersall.net">contact@jtattersall.net</a>
     </div>
@@ -47,31 +51,55 @@
     <div class="center-window" id="projects">
         <header><h2>Projects</h2></header>
         <div class="projects-container">
-            <div class="project-entry">
+            <div class="project-entry" id="jtattersall">
+                <div class="project-img">
+                    <img src="img/jtattersall.png">
+                </div>
+                <div class="project-content">
+                    <h2>jtattersall.net</h2>
+                    <h3><i class='far fa-calendar-alt'></i>June 2018 - Present</h3>
+                    This very website. Created to provide an online portfolio for information about my interests and projects.
+                    <noscript><a href="project_content/jtattersall/index.html">Read more..</a></noscript>
+                </div>
+                <div class="project-tags">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JS &amp; jQuery</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-entry" id="bill_ninja">
                 <div class="project-img">
                     <img src="img/bill_ninja.svg">
                 </div>
                 <div class="project-content">
                     <h2>Bill Ninja</h2>
+                    <h3><i class='far fa-calendar-alt'></i>February - March 2018</h3>
                     A PHP web app for students splitting bills in shared housing. Created as coursework for CS139 Web Development Technologies module.
+                    <noscript><a href="project_content/bill_ninja/index.html">Read more..</a></noscript>
                 </div>
                 <div class="project-tags">
                     <ul>
                         <li>PHP</li>
-                        <li>Javascript & jQuery</li>
+                        <li>SQL</li>
+                        <li>JS &amp; jQuery</li>
                         <li>HTML</li>
                         <li>CSS</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="project-entry">
+            <div class="project-entry" id="wirus">
                 <div class="project-img">
                     <img src="img/wirus.png">
                 </div>
                 <div class="project-content">
                     <h2>Wirus</h2>
+                    <h3><i class='far fa-calendar-alt'></i>February 2018</h3>
                     A Java project to efficiently perform various tasks with a large data set for CS126 Design of Information Structures coursework.
+                    <noscript><a href="project_content/wirus/index.html">Read more..</a></noscript>
                 </div>
                 <div class="project-tags">
                     <ul>
@@ -82,13 +110,15 @@
                 </div>
             </div>
 
-            <div class="project-entry">
+            <div class="project-entry" id="robot_maze">
                 <div class="project-img">
                     <img src="img/robot_maze.png">
                 </div>
                 <div class="project-content">
                     <h2>Robot Maze</h2>
+                    <h3><i class='far fa-calendar-alt'></i>October - December 2017</h3>
                     A Java project to guide a robot through a virtual maze for CS118 Programming for Computer Scientists coursework.
+                    <noscript><a href="project_content/robot_maze/index.html">Read more..</a></noscript>
                 </div>
                 <div class="project-tags">
                     <ul>
@@ -97,13 +127,53 @@
                 </div>
             </div>
 
-            <div class="project-entry">
+            <div class="project-entry" id="cuebright">
+                <div class="project-img">
+                    <img src="img/cuebright.png">
+                </div>
+                <div class="project-content">
+                    <h2>CueBright</h2>
+                    <h3><i class='far fa-calendar-alt'></i>August 2017 - Present</h3>
+                    A Windows application to control the colour and brightness of a Corsair CUE-enabled keyboard using command-line arguments.
+                    <noscript><a href="project_content/cuebright/index.html">Read more..</a></noscript>
+                </div>
+                <div class="project-tags">
+                    <ul>
+                        <li>Visual Basic</li>
+                        <li>3rd Party APIs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-entry" id="asset_manager">
+                <div class="project-img">
+                    <img src="img/asset_manager.png">
+                </div>
+                <div class="project-content">
+                    <h2>Asset Manager</h2>
+                    <h3><i class='far fa-calendar-alt'></i>October 2016 - March 2017</h3>
+                    A Windows application to track and monitor company assets. Created for Computer Science A Level coursework.
+                    <noscript><a href="project_content/asset_manager/index.html">Read more..</a></noscript>
+                </div>
+                <div class="project-tags">
+                    <ul>
+                        <li>Visual Basic</li>
+                        <li>SQL</li>
+                        <li>Web APIs</li>
+                        <li>Report</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-entry" id="autobright">
                 <div class="project-img">
                     <img src="img/autobright.png">
                 </div>
                 <div class="project-content">
                     <h2>AutoBright</h2>
+                    <h3><i class='far fa-calendar-alt'></i>August 2016 - Present</h3>
                     A Windows application to dim monitor backlights on a schedule determined by sunrise/sunset times via DDC/CI.
+                    <noscript><a href="project_content/autobright/index.html">Read more..</a></noscript>
                 </div>
                 <div class="project-tags">
                     <ul>
@@ -114,29 +184,15 @@
                 </div>
             </div>
 
-            <div class="project-entry">
-                <div class="project-img">
-                    <img src="img/cuebright.png">
-                </div>
-                <div class="project-content">
-                    <h2>CueBright</h2>
-                    A Windows application to control the colour and brightness of a Corsair CUE-enabled keyboard using command-line arguments.
-                </div>
-                <div class="project-tags">
-                    <ul>
-                        <li>Visual Basic</li>
-                        <li>3rd Party APIs</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="project-entry">
+            <div class="project-entry" id="easy_get_iplayer">
                 <div class="project-img">
                     <img src="img/easy_get_iplayer.png">
                 </div>
                 <div class="project-content">
                     <h2>easy_get_iplayer</h2>
+                    <h3><i class='far fa-calendar-alt'></i>January 2016 - Present</h3>
                     A Windows application to provide an easy-to-use GUI for the get_iplayer project, intended for use as a physical recorder alternative.
+                    <noscript><a href="project_content/easy_get_iplayer/index.html">Read more..</a></noscript>
                 </div>
                 <div class="project-tags">
                     <ul>

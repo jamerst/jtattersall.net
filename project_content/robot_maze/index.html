@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Robot Maze</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <link href="../../css/reset.css" type="text/css" rel="stylesheet"/>
+    <link href="../../css/main.css" type="text/css" rel="stylesheet"/>
+    <link href="../../css/main_light.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<header class="main-header">
+    <h1>James Tattersall</h1>
+    <nav>
+        <ul>
+            <li><a href="../../index.html#projects">Back to Projects</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="page-content">
+    <div class="center-window">
+        <header><h2>Robot Maze</h2></header>
+        <p>The Robot Maze was the coursework for the introductory programming module CS118 in my first year. It consisted of two parts, the first of which was simpler and intended as a gentle introduction to programming, and the second was a little more advanced, intended to test actual skills more. The aim for both parts was to program the logic that the robot could use to navigate through the maze. The logic used in the first part was intentionally flawed and designed to show how seemingly sound theory doesn't always work in practice, whereas the second part built upon this to create a more efficient and effective algorithm, with the final part being to create an algorithm which could traverse the maze once, and remember the path through the maze which lead to the goal, and then recreate the same path each time the robot was run afterwards.</p>
+
+        <p>This project was my first project in Java, and so was a very good learning experience. I did struggle in some parts, but I eventually managed to create an almost perfectly working solution. My solution did fail in some cases when the starting square had multiple exit options, as I wasn't recording the first move taken by the robot, so then the path taken may not have been possible to recreate as the other path may have been chosen instead. However, overall it worked well, though I feel I could have improved the final part so that it could find the most efficient route in mazes with multiple possible routes using a pathfinding algorithm such as Dijkstra's.</p>
+
+        <p>Unfortunately the source code for this project is not publicly available due to plagiarism concerns.</p>
+
+        <div class="image-container">
+            <img src="/project_content/robot_maze/img/prim.png">
+            <img src="/project_content/robot_maze/img/loopy.png">
+        </div>
+    </div>
+</div>
+</body>
+</html>
