@@ -68,6 +68,10 @@ noscript a:visited {
     color: white;
 }
 
+code {
+    font-family: "Roboto Mono", monospace;
+}
+
 /*####HEADER & NAV STYLES####*/
 header {
     display: flex;
@@ -101,6 +105,10 @@ header {
 }
 
 header a:link {
+    color: white;
+}
+
+header a:visited {
     color: white;
 }
 

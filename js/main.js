@@ -1,6 +1,8 @@
 $(document).ready(function () {
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
+        $(".current-page").removeClass("current-page");
+        $(this).parent().addClass("current-page");
 
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top - 5
