@@ -11,7 +11,7 @@ h1 {
     font-size: 225%;
     font-weight: 500;
 
-    margin: .0;
+    margin: 0;
     padding: 0;
 }
 
@@ -32,6 +32,7 @@ h3 {
 
 p {
     font-size: 120%;
+    line-height: normal;
 
     margin-top: 0;
     margin-bottom: 1em;
@@ -243,6 +244,10 @@ footer {
     justify-content: center;;
 }
 
+.error-window {
+    width: 35vw !important;
+}
+
 .center-window {
     display: flex;
     flex-direction: column;
@@ -423,6 +428,17 @@ footer {
     color: white;
 }
 
+/*####IMAGES*/
+.error {
+    width: 20em;
+    height: 20em;
+
+    background-color: #9E9E9E;
+
+    -webkit-mask-image: url(../img/error.svg);
+    -webkit-mask-size: cover;
+}
+
 @media only screen and (max-device-width: 480px) {
     body {
         font-size: 150%;
@@ -490,6 +506,10 @@ footer {
         max-width: 95%;
     }
 
+    .error-window {
+        width: 90vw !important;
+    }
+
     .project-entry {
         font-size: 60%;
     }
@@ -512,5 +532,10 @@ footer {
 
     .footer-right {
         padding-right: 1em;
+    }
+
+    .error {
+        width: 10em;
+        height: 10em;
     }
 }
