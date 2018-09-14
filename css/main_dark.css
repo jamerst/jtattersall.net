@@ -1,0 +1,28 @@
+body {
+    color: white;
+    background-color: #212121;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: #9E9E9E;
+}
+
+.links i {
+    color: #9E9E9E;
+}
+
+.center-window {
+    background-color: #424242;
+}
+
+.project-entry {
+    background-color: #616161;
+}
+
+.project-entry:hover {
+    background-color: #757575;
+}

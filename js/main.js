@@ -28,4 +28,26 @@ $(document).ready(function () {
             });
         }
    });
+
+    let theme = Cookies.get("theme");
+
+    if (theme === "light") {
+        $("#theme-switch").text("Switch to Dark Theme");
+    } else {
+        $("#theme-switch").text("Switch to Light Theme");
+    }
+
+    $("#theme-switch").on("click", function () {
+        if (theme === "light") {
+            theme = "dark";
+            Cookies.set("theme", "dark");
+            $("head").append("<link href='/css/main_dark.css' type='text/css' rel='stylesheet'/>");
+            $("#theme-switch").text("Switch to Light Theme");
+        } else {
+            theme = "light";
+            Cookies.set("theme", "light");
+            $("link[rel=stylesheet][href='/css/main_dark.css']").remove();
+            $("#theme-switch").text("Switch to Dark Theme");
+        }
+    });
 });

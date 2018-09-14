@@ -226,6 +226,15 @@ footer {
     color: #7986CB;
 }
 
+#theme-switch {
+    font-size: 70%;
+
+    width: max-content;
+
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /*####CONTENT CONTAINERS####*/
 .page-content, .page-content-center {
     display: flex;
@@ -244,9 +253,6 @@ footer {
     justify-content: center;;
 }
 
-.error-window {
-    width: 35vw !important;
-}
 
 .center-window {
     display: flex;
@@ -263,6 +269,10 @@ footer {
     box-shadow: 0 .2em .4em 0 rgba(0, 0, 0, .50);
 
     align-items: center;
+}
+
+.error-window {
+    width: 35vw;
 }
 
 .center-window header {
@@ -487,6 +497,10 @@ footer {
         font-size: 200%;
     }
 
+    .links i {
+        margin: .5em .25em .5em .25em;
+    }
+
     .center-window {
         width: 90vw;
         margin-bottom: 1em;
@@ -507,7 +521,7 @@ footer {
     }
 
     .error-window {
-        width: 90vw !important;
+        width: 90vw;
     }
 
     .project-entry {
