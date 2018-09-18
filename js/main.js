@@ -40,12 +40,12 @@ $(document).ready(function () {
     $("#theme-switch").on("click", function () {
         if (theme === "light") {
             theme = "dark";
-            Cookies.set("theme", "dark");
+            Cookies.set("theme", "dark", { expires: 3650 });
             $("head").append("<link href='/css/main_dark.css' type='text/css' rel='stylesheet'/>");
             $("#theme-switch").text("Switch to Light Theme");
         } else {
             theme = "light";
-            Cookies.set("theme", "light");
+            Cookies.set("theme", "light", { expires: 3650 });
             $("link[rel=stylesheet][href='/css/main_dark.css']").remove();
             $("#theme-switch").text("Switch to Dark Theme");
         }
