@@ -15,7 +15,7 @@ $(document).ready(function () {
         })
     });
 
-    $(".project-entry").on("click", function () {
+    $("body").on("click", ".project-entry", function () {
         if (window.matchMedia("only screen and (max-device-width: 480px)").matches) {
             $(location).attr("href", "./project_content/" + this.id + "/index.html");
         } else {
