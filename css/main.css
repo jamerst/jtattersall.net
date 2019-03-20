@@ -363,7 +363,7 @@ footer {
     margin-right: .5em;
 }
 
-.project-img img {
+.project-img img, .project-img video {
     width: auto;
     max-width: 20em;
     height: 15em;
@@ -421,7 +421,7 @@ footer {
     justify-content: center;
 }
 
-.image-container img {
+.image-container img, .image-container video {
     width: 25rem;
     max-width: 90vw;
     height: auto;

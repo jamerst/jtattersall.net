@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#303F9F">
+
+    <title>Scientific Code Optimisation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <link rel="icon" href="../../img/logo.png"/>
+    <link href="../../css/reset.css" type="text/css" rel="stylesheet"/>
+    <link href="../../css/main.css" type="text/css" rel="stylesheet"/>
+
+    <script src="../../lib/jquery-3.3.1.min.js"></script>
+    <script src="../../lib/js.cookie.min.js"></script>
+
+    <script src="../../js/theme.js"></script>
+</head>
+<body>
+<header class="main-header">
+    <h1>James Tattersall</h1>
+    <nav>
+        <ul>
+            <li><a href="../../#projects">Back to Projects</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="page-content">
+    <div class="center-window">
+        <header><h2>Scientific Code Optimisation</h2></header>
+        <p>The coursework task for CS257 Advanced Computer Architecture was to optimise some existing code which ran an N-body simulation, albeit very slowly. Optimisations were attempted using many techniques, including multithreading, vectorisation, algorithmic optimisations and loop optimisations. Some of these optimisations had multiple different implementations, and results were collected for all versions, and their relative performances were compared in the report created about the optimisation process. The final version used AVX and FMA for vectorisation, an approximation for the reciprocal square root, OpenMP for multithreading and the GCC <code>-O3</code> optimisation flag. The scaling of performance for this final version with problem size was also investigated in the report.</p>
+
+        <p>This project further improved my confidence in C, and introduced me to vectorisation extensions and OpenMP. The final result gave a peak speedup of 140&times; and received a mark of 80%.</p>
+
+        <p>Unfortunately the source code for this project is not publicly available due to plagiarism concerns.</p>
+
+        <p>A video of the program visualisation is shown below.</p>
+        <div class="image-container">
+            <video loop controls src="img/cs257.webm" type="video/webm"><img src="img/cs257.jpg">(Your browser doesn't support HTML video)</video>
+        </div>
+    </div>
+</div>
+</body>
+</html>

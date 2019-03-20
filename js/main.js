@@ -1,4 +1,26 @@
 $(document).ready(function () {
+    let theme = Cookies.get("theme");
+ 
+    if (theme === "light") {
+        $("#theme-switch").text("Switch to Dark Theme");
+    } else {
+        $("#theme-switch").text("Switch to Light Theme");
+    }
+ 
+    $("#theme-switch").on("click", function () {
+        if (theme === "light") {
+            theme = "dark";
+            Cookies.set("theme", "dark", { expires: 3650 });
+            $("head").append("<link href='/css/main_dark.css' type='text/css' rel='stylesheet'/>");
+            $("#theme-switch").text("Switch to Light Theme");
+        } else {
+            theme = "light";
+            Cookies.set("theme", "light", { expires: 3650 });
+            $("link[rel=stylesheet][href='/css/main_dark.css']").remove();
+            $("#theme-switch").text("Switch to Dark Theme");
+        }
+    });
+
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
         $(".current-page").removeClass("current-page");
@@ -29,25 +51,12 @@ $(document).ready(function () {
         }
    });
 
-    let theme = Cookies.get("theme");
+   $("body").on("mouseenter", "#cs257", function () {
+        $("#cs257-video").get(0).play();
+   });
 
-    if (theme === "light") {
-        $("#theme-switch").text("Switch to Dark Theme");
-    } else {
-        $("#theme-switch").text("Switch to Light Theme");
-    }
-
-    $("#theme-switch").on("click", function () {
-        if (theme === "light") {
-            theme = "dark";
-            Cookies.set("theme", "dark", { expires: 3650 });
-            $("head").append("<link href='/css/main_dark.css' type='text/css' rel='stylesheet'/>");
-            $("#theme-switch").text("Switch to Light Theme");
-        } else {
-            theme = "light";
-            Cookies.set("theme", "light", { expires: 3650 });
-            $("link[rel=stylesheet][href='/css/main_dark.css']").remove();
-            $("#theme-switch").text("Switch to Dark Theme");
-        }
+    $("body").on("mouseleave", "#cs257", function () {
+        $("#cs257-video").get(0).pause();
+        $("#cs257-video").get(0).currentTime = 0;
     });
 });
