@@ -50,13 +50,4 @@ $(document).ready(function () {
             });
         }
    });
-
-   $("body").on("mouseenter", "#cs257", function () {
-        $("#cs257-video").get(0).play();
-   });
-
-    $("body").on("mouseleave", "#cs257", function () {
-        $("#cs257-video").get(0).pause();
-        $("#cs257-video").get(0).currentTime = 0;
-    });
 });
