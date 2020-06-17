@@ -1,7 +1,2 @@
-if (Cookies.get("theme") == undefined) {
-    Cookies.set("theme", "light", { expires: 3650 });
-}
-
-if (Cookies.get("theme") === "dark") {
-    $("head").append("<link href='/css/main_dark.css' type='text/css' rel='stylesheet'/>");
-}
+let b = document.cookie.match('(^|;)\\s*theme\\s*=\\s*([^;]+)');
+if (b && b.pop() === "dark") document.getElementsByTagName("html")[0].innerHTML += "<link href='/css/main_dark.css' type='text/css' rel='stylesheet'/>";
