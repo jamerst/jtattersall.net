@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="theme-color" content="#303F9F">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#303F9F">
 
-    <title>Intrusion Detection System</title>
+  <title>Intrusion Detection System</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="preload" as="script" href="/js/theme.js" />
+  <link rel="preload" as="style" href="/css/main.css" />
 
-    <link rel="icon" href="../../img/logo.png"/>
-    <link href="../../css/reset.css" type="text/css" rel="stylesheet"/>
-    <link href="../../css/main.css" type="text/css" rel="stylesheet"/>
-
-    <script src="../../lib/jquery-3.3.1.min.js"></script>
-    <script src="../../lib/js.cookie.min.js"></script>
-
-    <script src="../../js/theme.js"></script>
+  <link href="/css/main.css" type="text/css" rel="stylesheet" />
+  <link rel="icon" href="/img/logo.png" />
 </head>
+
 <body>
-<header class="main-header">
+  <header class="main-header">
     <h1>James Tattersall</h1>
     <nav>
-        <ul>
-            <li><a href="../../#projects">Back to Projects</a></li>
-        </ul>
+      <ul>
+        <li><a href="../../#projects">Back to Projects</a></li>
+      </ul>
     </nav>
-</header>
-<div class="page-content">
+  </header>
+  <div class="page-content">
     <div class="center-window">
-        <header><h2>Intrusion Detection System</h2></header>
-        <p>The coursework task for CS241 Operating Systems and Networks was to create a system which would examine all packets flowing through a system to check for suspicious activity. This was done using the <a href="https://www.tcpdump.org/">libpcap</a> library for intercepting the packets and POSIX threads for multithreading. The system had a couple of extra features beyond the specification, including live output statistics, full logging and configurable thread count. A full report was also written detailing my choices when designing and implementing the system.</p>
+      <header>
+        <h2>Intrusion Detection System</h2>
+      </header>
+      <div class="project-popup-content">
+        <p>The coursework task for CS241 Operating Systems and Networks was to create a system which would
+          examine all packets flowing through a system to check for suspicious activity. This was done using
+          the <a href="https://www.tcpdump.org/">libpcap</a> library for intercepting the packets and POSIX
+          threads for multithreading. The system had a couple of extra features beyond the specification,
+          including live output statistics, full logging and configurable thread count. A full report was also
+          written detailing my choices when designing and implementing the system.</p>
 
-        <p>This project improved my confidence and ability of programming in C massively, as it was relatively complex and non-trivial, especially compared to earlier work I had done in C. The final result was fully functional and received a mark of 97%.</p>
+        <p>This project improved my confidence and ability of programming in C massively, as it was relatively
+          complex and non-trivial, especially compared to earlier work I had done in C. The final result was
+          fully functional and received a mark of 97%.</p>
 
-        <p>Unfortunately the source code for this project is not publicly available due to plagiarism concerns.</p>
+        <p>Unfortunately the source code for this project is not publicly available due to plagiarism concerns.
+        </p>
 
         <p>A sample output of the application is shown below.</p>
         <div class="image-container">
-            <img src="/project_content/idsniff/img/output.png">
+          <img src="/project_content/idsniff/img/output.png">
         </div>
+      </div>
     </div>
-</div>
+  </div>
 </body>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+  integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+<link href="/css/reset.css" type="text/css" rel="stylesheet" />
+<link href="/css/main.css" type="text/css" rel="stylesheet" />
+
+<script src="/js/theme.js"></script>
+
 </html>

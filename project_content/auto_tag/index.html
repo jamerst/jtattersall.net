@@ -1,49 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="theme-color" content="#303F9F">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#303F9F">
 
-    <title>AutoTag</title>
+  <title>AutoTag</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="preload" as="script" href="/js/theme.js" />
+  <link rel="preload" as="style" href="/css/main.css" />
 
-    <link rel="icon" href="../../img/logo.png"/>
-    <link href="../../css/reset.css" type="text/css" rel="stylesheet"/>
-    <link href="../../css/main.css" type="text/css" rel="stylesheet"/>
-
-    <script src="../../lib/jquery-3.3.1.min.js"></script>
-    <script src="../../lib/js.cookie.min.js"></script>
-
-    <script src="../../js/theme.js"></script>
+  <link href="/css/main.css" type="text/css" rel="stylesheet" />
+  <link rel="icon" href="/img/logo.png" />
 </head>
+
 <body>
-<header class="main-header">
+  <header class="main-header">
     <h1>James Tattersall</h1>
     <nav>
-        <ul>
-            <li><a href="../../#projects">Back to Projects</a></li>
-        </ul>
+      <ul>
+        <li><a href="../../#projects">Back to Projects</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<div class="page-content">
+  <div class="page-content">
     <div class="center-window">
-        <header><h2>AutoTag</h2></header>
-        <p>AutoTag is a utility for automatically tagging and renaming TV show episodes written in C#. AutoTag was inspired by an application I had been using for several years, <a href="https://sourceforge.net/projects/autotvtagger/">Auto TV Tagger</a>, which performs the same function, but I always had a few issues with it, namely that it often failed to give useful error messages and couldn't handle invalid file name characters, meaning that I had to manually tag some files, which was annoying. I was unable to find any other alternatives which fulfilled my requirements of both renaming and tagging automatically, so I decided to create my own solution instead.</p>
+      <header>
+        <h2>AutoTag</h2>
+      </header>
+      <div class="project-popup-content">
+        <p>AutoTag is a utility for automatically tagging and renaming TV show episodes written in C#. AutoTag
+          was inspired by an application I had been using for several years, <a
+            href="https://sourceforge.net/projects/autotvtagger/">Auto TV Tagger</a>, which performs the
+          same function, but I always had a few issues with it, namely that it often failed to give useful
+          error messages and couldn't handle invalid file name characters, meaning that I had to manually tag
+          some files, which was annoying. I was unable to find any other alternatives which fulfilled my
+          requirements of both renaming and tagging automatically, so I decided to create my own solution
+          instead.</p>
 
-        <p>Despite being my first C# project, development of AutoTag went smoothly and quickly, probably due to the fact that C# basically only differs from Visual Basic.NET in syntax. I did struggle to get some of the API working due to quite poor documentation, but because the source code for the wrapper was available, I could work it out quite easily from that. This project also taught me about the use of <code>async</code> and <code>await</code> instead of the BackgroundWorker method I had previously been using, which I actually found to be much easier to work with than the BackgroundWorker.</p>
+        <p>Despite being my first C# project, development of AutoTag went smoothly and quickly, probably due to
+          the fact that C# basically only differs from Visual Basic.NET in syntax. I did struggle to get some
+          of the API working due to quite poor documentation, but because the source code for the wrapper was
+          available, I could work it out quite easily from that. This project also taught me about the use of
+          <code>async</code> and <code>await</code> instead of the BackgroundWorker method I had previously
+          been using, which I actually found to be much easier to work with than the BackgroundWorker.</p>
 
-        <p>AutoTag uses data from <a href="https://www.thetvdb.com/">thetvdb.com</a> using their free API, accessed through the <a href="https://github.com/HristoKolev/TvDbSharper">TvDbSharper</a> wrapper. File name parsing is provided by a part of <a href="https://github.com/pheiberg/SubtitleFetcher">SubtitleFetcher</a> and file tagging is provided by <a href="https://github.com/mono/taglib-sharp">taglib-sharp</a>.</p>
+        <p>AutoTag uses data from <a href="https://www.thetvdb.com/">thetvdb.com</a> using their free API,
+          accessed through the <a href="https://github.com/HristoKolev/TvDbSharper">TvDbSharper</a> wrapper.
+          File name parsing is provided by a part of <a
+            href="https://github.com/pheiberg/SubtitleFetcher">SubtitleFetcher</a> and file tagging is
+          provided by <a href="https://github.com/mono/taglib-sharp">taglib-sharp</a>.</p>
 
-        <p>Source code and binaries are available on my GitHub <a href="https://github.com/jamerst/AutoTag">here</a>.</p>
+        <p>Source code and binaries are available on my GitHub <a href="https://github.com/jamerst/AutoTag">here</a>.
+        </p>
 
         <div class="image-container">
-            <img src="/project_content/auto_tag/img/auto_tag.png">
+          <img src="/project_content/auto_tag/img/auto_tag.png">
         </div>
+      </div>
     </div>
-</div>
+  </div>
 </body>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+  integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+<link href="/css/reset.css" type="text/css" rel="stylesheet" />
+<link href="/css/main.css" type="text/css" rel="stylesheet" />
+
+<script src="/js/theme.js"></script>
+
 </html>

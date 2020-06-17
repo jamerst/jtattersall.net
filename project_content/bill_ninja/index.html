@@ -1,55 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="theme-color" content="#303F9F">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#303F9F">
 
-    <title>Bill Ninja</title>
+  <title>Bill Ninja</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="preload" as="script" href="/js/theme.js" />
+  <link rel="preload" as="style" href="/css/main.css" />
 
-    <link rel="icon" href="../../img/logo.png"/>
-    <link href="../../css/reset.css" type="text/css" rel="stylesheet"/>
-    <link href="../../css/main.css" type="text/css" rel="stylesheet"/>
-
-    <script src="../../lib/jquery-3.3.1.min.js"></script>
-    <script src="../../lib/js.cookie.min.js"></script>
-
-    <script src="../../js/theme.js"></script>
+  <link href="/css/main.css" type="text/css" rel="stylesheet" />
+  <link rel="icon" href="/img/logo.png" />
 </head>
+
 <body>
-<header class="main-header">
+  <header class="main-header">
     <h1>James Tattersall</h1>
     <nav>
-        <ul>
-            <li><a href="../../#projects">Back to Projects</a></li>
-        </ul>
+      <ul>
+        <li><a href="../../#projects">Back to Projects</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<div class="page-content">
+  <div class="page-content">
     <div class="center-window">
-        <header><h2>Bill Ninja</h2></header>
-        <p>For one of my optional modules in my first year at the University of Warwick, I chose to take a web development module, and as part of the assessment for this module, a task was set to create a bill splitting application intended for use by students living in shared housing. The task included 7 mandatory features, which contained the core features necessary for the system to be usable and useful, which accounted for 90% of the marks available, with a further 10% allocated for extra features beyond the specification. I implemented several extra features, including more customisable splitting (e.g. different amounts per person), a graphical representation of spending, full payment history and email notifications. Development of the system went relatively smoothly, with a few hitches encountered due to my lack of experience in the area at the start of development, particularly with some of the more complex DOM manipulation required, but these were all successfully overcome to produce the final solution.</p>
+      <header>
+        <h2>Bill Ninja</h2>
+      </header>
+      <div class="project-popup-content">
+        <p>For one of my optional modules in my first year at the University of Warwick, I chose to take a web
+          development module, and as part of the assessment for this module, a task was set to create a bill
+          splitting application intended for use by students living in shared housing. The task included 7
+          mandatory features, which contained the core features necessary for the system to be usable and
+          useful, which accounted for 90% of the marks available, with a further 10% allocated for extra
+          features beyond the specification. I implemented several extra features, including more customisable
+          splitting (e.g. different amounts per person), a graphical representation of spending, full payment
+          history and email notifications. Development of the system went relatively smoothly, with a few
+          hitches encountered due to my lack of experience in the area at the start of development,
+          particularly with some of the more complex DOM manipulation required, but these were all
+          successfully overcome to produce the final solution.</p>
 
-        <p>The system was implemented using PHP and SQLite for the backend systems, and HTML, CSS, JavaScript and jQuery for the frontend. The frontend made extensive use of technologies such as AJAX to improve the user experience, and the system was designed to be as secure as possible using the resources available (HTTPS was not available due to the use of a shared server, and the software stack not under my control, with a severely outdated PHP version being in use). I feel I managed to create a very good solution which went above and beyond the specification to provide a very usable application, which with a few small modifications could easily be a commercial product. My final mark for the coursework was 97%.</p>
+        <p>The system was implemented using PHP and SQLite for the backend systems, and HTML, CSS, JavaScript
+          and jQuery for the frontend. The frontend made extensive use of technologies such as AJAX to improve
+          the user experience, and the system was designed to be as secure as possible using the resources
+          available (HTTPS was not available due to the use of a shared server, and the software stack not
+          under my control, with a severely outdated PHP version being in use). I feel I managed to create a
+          very good solution which went above and beyond the specification to provide a very usable
+          application, which with a few small modifications could easily be a commercial product. My final
+          mark for the coursework was 97%.</p>
 
-        <p>Since this module is no longer offered by the department, the source code for this project is now available on my GitHub <a href="https://github.com/jamerst/warwick-cs139">here</a>.</p>
+        <p>Since this module is no longer offered by the department, the source code for this project is now
+          available on my GitHub <a href="https://github.com/jamerst/warwick-cs139">here</a>.</p>
 
         <p>Screenshots of the finished system are shown below.</p>
 
         <div class="image-container">
-            <img src="/project_content/bill_ninja/img/login.png">
-            <img src="/project_content/bill_ninja/img/dashboard.png">
-            <img src="/project_content/bill_ninja/img/graph.png">
-            <img src="/project_content/bill_ninja/img/new_bill.png">
-            <img src="/project_content/bill_ninja/img/bills.png">
-            <img src="/project_content/bill_ninja/img/groups.png">
-            <img src="/project_content/bill_ninja/img/history.png">
+          <img src="/project_content/bill_ninja/img/login.png">
+          <img src="/project_content/bill_ninja/img/dashboard.png">
+          <img src="/project_content/bill_ninja/img/graph.png">
+          <img src="/project_content/bill_ninja/img/new_bill.png">
+          <img src="/project_content/bill_ninja/img/bills.png">
+          <img src="/project_content/bill_ninja/img/groups.png">
+          <img src="/project_content/bill_ninja/img/history.png">
         </div>
+      </div>
     </div>
-</div>
+  </div>
 </body>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500,400italic" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+  integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+<link href="/css/reset.css" type="text/css" rel="stylesheet" />
+<link href="/css/main.css" type="text/css" rel="stylesheet" />
+
+<script src="/js/theme.js"></script>
+
 </html>

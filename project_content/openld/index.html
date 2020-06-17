@@ -8,18 +8,11 @@
 
   <title>OpenLD</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500,400italic" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="preload" as="script" href="/js/theme.js" />
+  <link rel="preload" as="style" href="/css/main.css" />
 
-  <link rel="icon" href="../../img/logo.png" />
-  <link href="../../css/reset.css" type="text/css" rel="stylesheet" />
-  <link href="../../css/main.css" type="text/css" rel="stylesheet" />
-
-  <script src="../../lib/jquery-3.3.1.min.js"></script>
-  <script src="../../lib/js.cookie.min.js"></script>
-
-  <script src="../../js/theme.js"></script>
+  <link href="/css/main.css" type="text/css" rel="stylesheet" />
+  <link rel="icon" href="/img/logo.png" />
 </head>
 
 <body>
@@ -37,70 +30,81 @@
       <header>
         <h2>OpenLD</h2>
       </header>
+      <div class="project-popup-content">
+        <p>
+          OpenLD is a collaborative CAD system for creating lighting designs. It allows multiple people to work on a CAD
+          document simultaneously using live-editing functionality, which allows lighting designers to more easily
+          collaborate with other team members when working on a design. It was created as my final year project at the
+          University of Warwick, and was the subject of my dissertation, which covered the design, implementation, and
+          evaluation of the system.
+        </p>
 
-      <p>
-        OpenLD is a collaborative CAD system for creating lighting designs. It allows multiple people to work on a CAD
-        document simultaneously using live-editing functionality, which allows lighting designers to more easily
-        collaborate with other team members when working on a design. It was created as my final year project at the
-        University of Warwick, and was the subject of my dissertation, which covered the design, implementation, and
-        evaluation of the system.
-      </p>
+        <p>
+          Lighting design is the process of arranging lights to enhance performances such as concerts or plays. During my
+          work with the university technical theatre society, I realised a problem with the existing tools that lighting
+          designers were using - they do not allow easy collaboration. Creating a design often requires collaboration with
+          other team members and specialists in areas such as rigging or electrical, however existing solutions do not
+          easily
+          permit this. With existing solutions, designs are created offline on the designer's computer, and so are not
+          easily accessible by others on-demand. This means that multiple people cannot work on a drawing simultaneously:
+          they must instead wait to receive a copy from the designer in order to contribute to it.
+        </p>
 
-      <p>
-        Lighting design is the process of arranging lights to enhance performances such as concerts or plays. During my
-        work with the university technical theatre society, I realised a problem with the existing tools that lighting
-        designers were using - they do not allow easy collaboration. Creating a design often requires collaboration with
-        other team members and specialists in areas such as rigging or electrical, however existing solutions do not
-        easily
-        permit this. With existing solutions, designs are created offline on the designer's computer, and so are not
-        easily accessible by others on-demand. This means that multiple people cannot work on a drawing simultaneously:
-        they must instead wait to receive a copy from the designer in order to contribute to it.
-      </p>
+        <p>
+          OpenLD addresses these problems by providing a Google Docs style collaborative editor for lighting designs. This
+          allows the drawing to be shared and contributed to by an unlimited number of people on-demand, requiring only an
+          internet connection and web browser. OpenLD also streamlines the user interface compared to existing solutions,
+          which are notoriously difficult to master due to the complexity of their user interface. OpenLD seeks to improve
+          this by utilising common design patterns, ensuring UI controls are well-sized and grouped, and ensuring that
+          controls to interact with the drawing are visible, and not hidden inside menu systems.
+        </p>
 
-      <p>
-        OpenLD addresses these problems by providing a Google Docs style collaborative editor for lighting designs. This
-        allows the drawing to be shared and contributed to by an unlimited number of people on-demand, requiring only an
-        internet connection and web browser. OpenLD also streamlines the user interface compared to existing solutions,
-        which are notoriously difficult to master due to the complexity of their user interface. OpenLD seeks to improve
-        this by utilising common design patterns, ensuring UI controls are well-sized and grouped, and ensuring that
-        controls to interact with the drawing are visible, and not hidden inside menu systems.
-      </p>
+        <p>
+          OpenLD is written using C# and JavaScript, consisting of an ASP.NET Core back-end and React.js front-end. This
+          was by far the biggest project I'd undertaken so far, so it was a huge challenge, especially when implementing
+          the edit synchronisation features. This was my first major project using ASP.NET Core and React.js, so this
+          improved my experience and confidence with both significantly. I also used Docker to containerise the system for
+          easy development and deployment by ensuring a consistent environment with all dependencies properly configured
+          and installed.
+        </p>
 
-      <p>
-        OpenLD is written using C# and JavaScript, consisting of an ASP.NET Core back-end and React.js front-end. This
-        was by far the biggest project I'd undertaken so far, so it was a huge challenge, especially when implementing
-        the edit synchronisation features. This was my first major project using ASP.NET Core and React.js, so this
-        improved my experience and confidence with both significantly. I also used Docker to containerise the system for
-        easy development and deployment by ensuring a consistent environment with all dependencies properly configured
-        and installed.
-      </p>
+        <p>
+          The source code for OpenLD is available on my <a href="https://github.com/jamerst/openld">GitHub</a>.
+        </p>
+        <p>
+          A demo of the final working prototype is also available at <a
+            href="https://www.openld.jtattersall.net/">https://www.openld.jtattersall.net/</a>.
+        </p>
+        <p>
+          <em>
+            Please note that this demo is hosted on a free, very low-power, Google Cloud Platform instance, which
+            affects performance noticeably, particularly for response times. <br>I recommend using a Chromium-based browser for performance reasons.
+          </em>
+        </p>
 
-      <p>
-        The source code for OpenLD is available on my <a href="https://github.com/jamerst/openld">GitHub</a>.
-      </p>
-      <p>
-        A demo of the final working prototype is also available at <a
-          href="https://www.openld.jtattersall.net/">https://www.openld.jtattersall.net/</a>.
-      </p>
-      <p>
-        <em>
-          Please note that this demo is hosted on a free, very low-power, Google Cloud Platform instance, which
-          affects performance, particularly response times, noticeably. <br>I recommend using a Chromium-based browser for performance reasons.
-        </em>
-      </p>
+        <p>
+          Screenshots of the system, and an exported drawing are shown below.
+        </p>
 
-      <p>
-        Screenshots of the system, and an exported drawing are shown below.
-      </p>
-
-      <div class="image-container">
-        <img src="/project_content/openld/img/openld_home.png" alt="OpenLD Home">
-        <img src="/project_content/openld/img/openld_editor.png" alt="OpenLD Editor">
-        <img src="/project_content/openld/img/openld_library.png" alt="OpenLD Fixture Library">
-        <img src="/project_content/openld/img/openld_exported.png" alt="Drawing exported from OpenLD">
+        <div class="image-container">
+          <img src="/project_content/openld/img/openld_home.png" alt="OpenLD Home">
+          <img src="/project_content/openld/img/openld_editor.png" alt="OpenLD Editor">
+          <img src="/project_content/openld/img/openld_library.png" alt="OpenLD Fixture Library">
+          <img src="/project_content/openld/img/openld_exported.png" alt="Drawing exported from OpenLD">
+        </div>
       </div>
     </div>
   </div>
 </body>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500,400italic" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+  integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+<link href="/css/reset.css" type="text/css" rel="stylesheet" />
+<link href="/css/main.css" type="text/css" rel="stylesheet" />
+
+<script src="/js/theme.js"></script>
 
 </html>

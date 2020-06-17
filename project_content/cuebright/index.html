@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="theme-color" content="#303F9F">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#303F9F">
 
-    <title>CueBright</title>
+  <title>CueBright</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="preload" as="script" href="/js/theme.js" />
+  <link rel="preload" as="style" href="/css/main.css" />
 
-    <link rel="icon" href="../../img/logo.png"/>
-    <link href="../../css/reset.css" type="text/css" rel="stylesheet"/>
-    <link href="../../css/main.css" type="text/css" rel="stylesheet"/>
-
-    <script src="../../lib/jquery-3.3.1.min.js"></script>
-    <script src="../../lib/js.cookie.min.js"></script>
-
-    <script src="../../js/theme.js"></script>
+  <link href="/css/main.css" type="text/css" rel="stylesheet" />
+  <link rel="icon" href="/img/logo.png" />
 </head>
+
 <body>
-<header class="main-header">
+  <header class="main-header">
     <h1>James Tattersall</h1>
     <nav>
-        <ul>
-            <li><a href="../../#projects">Back to Projects</a></li>
-        </ul>
+      <ul>
+        <li><a href="../../#projects">Back to Projects</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<div class="page-content">
+  <div class="page-content">
     <div class="center-window">
-        <header><h2>CueBright</h2></header>
-        <p>CueBright is a small Windows application that allows the colour and brightness of a Corsair CUE compatible keyboard to be set using command line arguments. I created this application because I wanted to reduce the brightness of my keyboard backlight when AutoBright reduced the brightness of my monitors. I did this by adding an external program integration option to AutoBright, where an external program can be started with command line arguments, however, the standard Corsair Utility Engine doesn't provide the option to set properties using command line arguments, so I had to write my own application to do this.</p>
+      <header>
+        <h2>CueBright</h2>
+      </header>
+      <div class="project-popup-content">
+        <p>CueBright is a small Windows application that allows the colour and brightness of a Corsair CUE
+          compatible keyboard to be set using command line arguments. I created this application because I
+          wanted to reduce the brightness of my keyboard backlight when AutoBright reduced the brightness of
+          my monitors. I did this by adding an external program integration option to AutoBright, where an
+          external program can be started with command line arguments, however, the standard Corsair Utility
+          Engine doesn't provide the option to set properties using command line arguments, so I had to write
+          my own application to do this.</p>
 
-        <p>CueBright was written in Visual Basic, and used the <a href="https://github.com/DarthAffe/CUE.NET">CUE.NET</a> library to communicate with CUE.</p>
+        <p>CueBright was written in Visual Basic, and used the <a
+            href="https://github.com/DarthAffe/CUE.NET">CUE.NET</a> library to communicate with CUE.</p>
 
-        <p>Source code and binaries are available on my GitHub <a href="https://github.com/jamerst/CueBright">here</a></p>
+        <p>Source code and binaries are available on my GitHub <a href="https://github.com/jamerst/CueBright">here</a>
+        </p>
+      </div>
     </div>
-</div>
+  </div>
 </body>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+  integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+<link href="/css/reset.css" type="text/css" rel="stylesheet" />
+<link href="/css/main.css" type="text/css" rel="stylesheet" />
+
+<script src="/js/theme.js"></script>
+
 </html>

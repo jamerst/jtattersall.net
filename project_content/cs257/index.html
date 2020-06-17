@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="theme-color" content="#303F9F">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#303F9F">
 
-    <title>Scientific Code Optimisation</title>
+  <title>Scientific Code Optimisation</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="preload" as="script" href="/js/theme.js" />
+  <link rel="preload" as="style" href="/css/main.css" />
 
-    <link rel="icon" href="../../img/logo.png"/>
-    <link href="../../css/reset.css" type="text/css" rel="stylesheet"/>
-    <link href="../../css/main.css" type="text/css" rel="stylesheet"/>
-
-    <script src="../../lib/jquery-3.3.1.min.js"></script>
-    <script src="../../lib/js.cookie.min.js"></script>
-
-    <script src="../../js/theme.js"></script>
+  <link href="/css/main.css" type="text/css" rel="stylesheet" />
+  <link rel="icon" href="/img/logo.png" />
 </head>
+
 <body>
-<header class="main-header">
+  <header class="main-header">
     <h1>James Tattersall</h1>
     <nav>
-        <ul>
-            <li><a href="../../#projects">Back to Projects</a></li>
-        </ul>
+      <ul>
+        <li><a href="../../#projects">Back to Projects</a></li>
+      </ul>
     </nav>
-</header>
-<div class="page-content">
+  </header>
+  <div class="page-content">
     <div class="center-window">
-        <header><h2>Scientific Code Optimisation</h2></header>
-        <p>The coursework task for CS257 Advanced Computer Architecture was to optimise some existing code which ran an N-body simulation, albeit very slowly. Optimisations were attempted using many techniques, including multithreading, vectorisation, algorithmic optimisations and loop optimisations. Some of these optimisations had multiple different implementations, and results were collected for all versions, and their relative performances were compared in the report created about the optimisation process. The final version used AVX and FMA for vectorisation, an approximation for the reciprocal square root, OpenMP for multithreading and the GCC <code>-O3</code> optimisation flag. The scaling of performance for this final version with problem size was also investigated in the report.</p>
+      <header>
+        <h2>Scientific Code Optimisation</h2>
+      </header>
+      <div class="project-popup-content">
+        <p>The coursework task for CS257 Advanced Computer Architecture was to optimise some existing code which
+          ran an N-body simulation, albeit very slowly. Optimisations were attempted using many techniques,
+          including multithreading, vectorisation, algorithmic optimisations and loop optimisations. Some of
+          these optimisations had multiple different implementations, and results were collected for all
+          versions, and their relative performances were compared in the report created about the optimisation
+          process. The final version used AVX and FMA for vectorisation, an approximation for the reciprocal
+          square root, OpenMP for multithreading and the GCC <code>-O3</code> optimisation flag. The scaling
+          of performance for this final version with problem size was also investigated in the report.</p>
 
-        <p>This project further improved my confidence in C, and introduced me to vectorisation extensions and OpenMP. The final result gave a peak speedup of 140&times; and received a mark of 80%.</p>
+        <p>This project further improved my confidence in C, and introduced me to vectorisation extensions and
+          OpenMP. The final result gave a peak speedup of 140&times; and received a mark of 80%.</p>
 
-        <p>Unfortunately the source code for this project is not publicly available due to plagiarism concerns.</p>
+        <p>Unfortunately the source code for this project is not publicly available due to plagiarism concerns.
+        </p>
 
         <p>A video of the program visualisation is shown below.</p>
         <div class="image-container">
-            <video loop controls src="img/cs257.webm" type="video/webm" title="CS257 Program Visualisation"><img src="img/cs257.jpg" alt="CS257 Program Visualisation">(Your browser doesn't support HTML video)</video>
+          <video loop controls src="/project_content/cs257/img/cs257.webm" type="video/webm" title="CS257 Program Visualisation"><img
+              src="/project_content/cs257/img/img/cs257.jpg" alt="CS257 Program Visualisation">(Your browser doesn't support HTML
+            video)</video>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 </body>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+  integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+<link href="/css/reset.css" type="text/css" rel="stylesheet" />
+<link href="/css/main.css" type="text/css" rel="stylesheet" />
+
+<script src="/js/theme.js"></script>
+
 </html>

@@ -308,7 +308,7 @@ footer {
 .center-window header {
     width: 100%;
     margin-bottom: .5em;
-    padding: 1em;
+    padding: 1.25em 1em;
 }
 
 .center-window h3, .center-window p {
@@ -440,9 +440,18 @@ footer {
 }
 
 .page-content-center .center-window {
-    overflow-y: auto;
-
     max-height: 90vh;
+}
+
+.project-popup-content {
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+
+    margin: -.5em -1em -1em -1em;
+    padding: .5em;
+
+    align-items: center;
 }
 
 .image-container {
