@@ -285,7 +285,6 @@ footer {
     justify-content: center;;
 }
 
-
 .center-window {
     display: flex;
     flex-direction: column;
@@ -482,6 +481,131 @@ footer {
     cursor: pointer;
 
     color: white;
+}
+
+/* ### IMAGE GALLERY ### */
+.gallery {
+    display: flex;
+    flex-direction: column;
+
+    width: 70%;
+    padding: .5em;
+
+    background-color: #E0E0E0;
+}
+
+#gallery-image {
+    display: grid;
+
+    width: 100%;
+    height: 40em;
+
+    justify-content: center;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+#gallery-current {
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    align-self: center;
+    justify-self: center;
+}
+
+.gallery-button {
+    z-index: 1000;
+
+    display: flex;
+
+    width: 3rem;
+    height: 3rem;
+
+    cursor: pointer;
+    transition: .25s;
+
+    color: white;
+    border-radius: 50%;
+    background-color: #3949AB;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .50);
+
+    grid-row: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-button:hover {
+    background-color: #3F51B5;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .75);
+}
+
+.gallery-button-disabled {
+    cursor: default;
+
+    color: #9E9E9E;
+    background-color: #757575;
+}
+
+.gallery-button-disabled:hover {
+    background-color: #757575;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .50);
+}
+
+#prev-button {
+    margin-left: 1em;
+
+    justify-self: start;
+    align-self: center;
+    grid-column: 1;
+}
+
+#next-button {
+    margin-right: 1em;
+
+    justify-self: end;
+    align-self: center;
+    grid-column: 3;
+}
+
+#gallery-caption {
+    margin-bottom: .5em;
+
+    align-self: center;
+}
+
+#gallery-images-container {
+    margin: 0 -.5em -.5em -.5em;
+    padding: .5em;
+
+    background-color: #5C6BC0;
+}
+
+#gallery-images {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    justify-content: start;
+}
+
+#gallery-images img {
+    height: 8em;
+    padding: 0 .25em;
+
+    cursor: pointer;
+
+    object-fit: contain;
+}
+
+#gallery-images img:first-child {
+    padding-left: 0;
+}
+
+#gallery-images img:last-child {
+    padding-right: 0;
 }
 
 /*####IMAGES*/

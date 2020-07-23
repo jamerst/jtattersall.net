@@ -26,3 +26,7 @@ a:visited {
 .project-entry:hover {
     background-color: #757575;
 }
+
+.gallery {
+    background-color: #616161;
+}

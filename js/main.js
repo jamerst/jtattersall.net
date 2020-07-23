@@ -65,6 +65,8 @@ $(document).ready(function () {
         $(".page-content-center > .center-window > header")
           .prepend("<div class='left'></div>")
           .append("<div class='right'><div class='close-button' title='Close'><i class='far fa-times-circle'></i></div></div>");
+
+          createGallery();
       });
     }
   });
