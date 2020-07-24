@@ -280,9 +280,11 @@ footer {
 }
 
 .page-content-center {
+    overflow: hidden;
+
     min-height: 100vh;
 
-    justify-content: center;;
+    justify-content: center;
 }
 
 .center-window {
@@ -598,6 +600,11 @@ footer {
     cursor: pointer;
 
     object-fit: contain;
+    filter: brightness(.65);
+}
+
+img#selected-image {
+    filter: unset !important;
 }
 
 #gallery-images img:first-child {
