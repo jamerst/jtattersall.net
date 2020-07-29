@@ -1,25 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-  let theme = getTheme();
+  if (document.getElementById("theme-switch")) {
+    let theme = getTheme();
 
-  if (theme && theme === "light" || !theme && window.matchMedia("screen and (prefers-color-scheme: light)").matches) {
-    document.getElementById("theme-switch").textContent = "Switch to Dark Theme";
-  } else {
-    document.getElementById("theme-switch").textContent = "Switch to Light Theme";
-  }
-
-  document.getElementById("theme-switch").addEventListener("click", () => {
-    if (theme === "light") {
-      theme = "dark";
-      setTheme(theme);
-      document.getElementsByTagName("html")[0].lastChild.insertAdjacentHTML("beforeend", "<link href='/css/main_dark.css' type='text/css' rel='stylesheet'/>");
-      document.getElementById("theme-switch").textContent = "Switch to Light Theme";
-    } else {
-      theme = "light";
-      setTheme(theme);
-      document.querySelector("link[rel=stylesheet][href='/css/main_dark.css']").remove();
+    if (theme && theme === "light" || !theme && window.matchMedia("screen and (prefers-color-scheme: light)").matches) {
       document.getElementById("theme-switch").textContent = "Switch to Dark Theme";
+    } else {
+      document.getElementById("theme-switch").textContent = "Switch to Light Theme";
     }
-  });
+
+    document.getElementById("theme-switch").addEventListener("click", () => {
+      if (theme === "light") {
+        theme = "dark";
+        setTheme(theme);
+        document.getElementsByTagName("html")[0].lastChild.insertAdjacentHTML("beforeend", "<link href='/css/main_dark.css' type='text/css' rel='stylesheet'/>");
+        document.getElementById("theme-switch").textContent = "Switch to Light Theme";
+      } else {
+        theme = "light";
+        setTheme(theme);
+        document.querySelector("link[rel=stylesheet][href='/css/main_dark.css']").remove();
+        document.getElementById("theme-switch").textContent = "Switch to Dark Theme";
+      }
+    });
+  }
 
   document.querySelectorAll('a[href^="#"]').forEach(elem => {
     elem.addEventListener("click", event => {
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   [...document.getElementsByClassName("project-entry")].forEach(elem => {
     elem.addEventListener("click", () => {
       if (window.matchMedia("only screen and (max-device-width: 480px)").matches) {
-        window.location = `/project_content/${elem.id}/index.html`;
+        window.location = `/project_content/${elem.id}`;
       } else {
         document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend",
           `<div id="cover" class="hide-cover">
@@ -52,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>`
         );
 
-        fetch(`/project_content/${elem.id}/index.html`)
-          .then(response => response.text())
+        fetch(`/project_content/${elem.id}`)
+          .then(r => r.text())
           .then(t => {
             let temp = document.createElement("span");
             temp.innerHTML = t;

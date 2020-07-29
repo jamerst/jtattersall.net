@@ -334,14 +334,16 @@ footer {
 
 .links {
     font-size: 300%;
+
+    margin: .5em 0;
+}
+
+.links a {
+    margin: 0 .5em;
 }
 
 .links a:link {
     color: #616161;
-}
-
-.links i {
-    margin: .5em;
 }
 
 .links i:hover {

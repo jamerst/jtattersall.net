@@ -31,10 +31,25 @@
         <h2>jtattersall.net</h2>
       </header>
       <div class="project-popup-content">
-        <p>My online portfolio. I don't think I can really say much more, just look for yourself. Created using
-          HTML, CSS and jQuery and hosted on <a href="https://www.netlify.com/">Netlify</a>. Originally the
-          site was hosted on AWS S3, which was surprisingly affordable, but I changed to Netlify to allow
-          easier site updating via automatic git pulls and SSL.</p>
+        <p>My online portfolio. A static site created using HTML, CSS and JavaScript, with fully bespoke styling.
+          Designed to be accessible and usable on almost any device, with or without JavaScript. Hosted on <a
+            href="https://www.netlify.com/">Netlify</a>. The site was previously hosted on AWS S3, which was
+          surprisingly affordable, but I changed to Netlify to allow easier site updating via automatic git pulls and
+          SSL.</p>
+
+        <p>Originally the site heavily utilised jQuery for interactivity, but for version 2, I rewrote the site to
+          instead use pure vanilla JavaScript. The main reason for this was to improve performance and eliminate the
+          large jQuery script file. The site runs noticeably smoother with pure vanilla JavaScript, especially for fade
+          in/out effects, which use native CSS transition animations in the rewritten version. The process of
+          eliminating jQuery was actually simpler than expected, as most common jQuery operations are easily replicated
+          using just the native browser API.</p>
+
+        <p>In version 2, I also created my own simple image gallery to better showcase images relating to projects. This
+          is designed such that the site is still usable even with JavaScript disabled by utilising
+          <code>noscript</code> tags to store the images, then using JavaScript to extract the images when it is
+          enabled. This allows both JavaScript enabled and disabled pages to be created without duplicating any content.
+        </p>
+
         <p>Source code available on my GitHub <a href="https://github.com/jamerst/jtattersall.net">here</a>.</p>
       </div>
     </div>
