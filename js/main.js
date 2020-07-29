@@ -1,73 +1,81 @@
-$(document).ready(function () {
-  let theme = Cookies.get("theme");
-  if (theme == undefined) {
-    Cookies.set("theme", "light", { expires: 3650, sameSite: "strict" });
-    theme = "light";
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  let theme = getTheme();
 
-  if (theme === "light") {
-    $("#theme-switch").text("Switch to Dark Theme");
+  if (theme && theme === "light" || !theme && window.matchMedia("screen and (prefers-color-scheme: light)").matches) {
+    document.getElementById("theme-switch").textContent = "Switch to Dark Theme";
   } else {
-    $("#theme-switch").text("Switch to Light Theme");
+    document.getElementById("theme-switch").textContent = "Switch to Light Theme";
   }
 
-  $("#theme-switch").on("click", function () {
+  document.getElementById("theme-switch").addEventListener("click", () => {
     if (theme === "light") {
       theme = "dark";
-      Cookies.set("theme", "dark", { expires: 3650, sameSite: "strict" });
-      $("html").append("<link href='/css/main_dark.css' type='text/css' rel='stylesheet'/>");
-      $("#theme-switch").text("Switch to Light Theme");
+      setTheme(theme);
+      document.getElementsByTagName("html")[0].lastChild.insertAdjacentHTML("beforeend", "<link href='/css/main_dark.css' type='text/css' rel='stylesheet'/>");
+      document.getElementById("theme-switch").textContent = "Switch to Light Theme";
     } else {
       theme = "light";
-      Cookies.set("theme", "light", { expires: 3650, sameSite: "strict" });
-      $("link[rel=stylesheet][href='/css/main_dark.css']").remove();
-      $("#theme-switch").text("Switch to Dark Theme");
+      setTheme(theme);
+      document.querySelector("link[rel=stylesheet][href='/css/main_dark.css']").remove();
+      document.getElementById("theme-switch").textContent = "Switch to Dark Theme";
     }
   });
 
-  $(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
+  document.querySelectorAll('a[href^="#"]').forEach(elem => {
+    elem.addEventListener("click", event => {
+      event.preventDefault();
 
-    if ($(this).parent().hasClass('current-page')) return;
+      if (event.target.parentElement.classList.contains("current-page")) return;
 
-    $(".current-page").removeClass('current-page');
-    $(this).parent().addClass('current-page');
+      document.getElementsByClassName("current-page")[0].classList.remove("current-page");
+      event.target.parentElement.classList.add("current-page");
 
-    // if on mobile
-    if (window.matchMedia("only screen and (max-device-width: 480px)").matches) {
-      $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top - 5
-      }, 500);
-    // if on desktop
-    } else {
-      $('.page-content').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top - ($('.main-header').height() + 20)
-      }, 500);
-    }
-
-  });
-
-  $("body").on("click", ".close-button", function () {
-    $(".cover").fadeOut(300, function () {
-      $(".cover").remove();
+      document.querySelector(event.target.attributes["href"].value).scrollIntoView({ behavior: "smooth" });
     })
   });
 
-  $("body").on("click", ".project-entry", function () {
-    if (window.matchMedia("only screen and (max-device-width: 480px)").matches) {
-      $(location).attr("href", "./project_content/" + this.id + "/index.html");
-    } else {
-      $("body").append(`<div class="cover">
-        <div class="page-content-center"></div>
-        </div>`).hide().fadeIn(200);
-
-      $(".page-content-center").load("/project_content/" + this.id + "/index.html .center-window", function () {
-        $(".page-content-center > .center-window > header")
-          .prepend("<div class='left'></div>")
-          .append("<div class='right'><div class='close-button' title='Close'><i class='far fa-times-circle'></i></div></div>");
-
-          createGallery();
-      });
+  document.getElementsByTagName("body")[0].addEventListener("click", e => {
+    if (e.target.parentElement.id === "close-button") {
+      document.getElementById("cover").classList.replace("show-cover", "hide-cover");
+      setTimeout(() => document.getElementById("cover").remove(), 300);
     }
   });
+
+  [...document.getElementsByClassName("project-entry")].forEach(elem => {
+    elem.addEventListener("click", () => {
+      if (window.matchMedia("only screen and (max-device-width: 480px)").matches) {
+        window.location = `/project_content/${elem.id}/index.html`;
+      } else {
+        document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend",
+          `<div id="cover" class="hide-cover">
+          <div class="page-content-center" id="cover-content"></div>
+          </div>`
+        );
+
+        fetch(`/project_content/${elem.id}/index.html`)
+          .then(response => response.text())
+          .then(t => {
+            let temp = document.createElement("span");
+            temp.innerHTML = t;
+            document.getElementById("cover-content").appendChild(temp.getElementsByClassName("center-window")[0]);
+
+            let header = document.querySelector(".page-content-center > .center-window > header");
+            header.insertAdjacentHTML("afterbegin", "<div class='left'></div>");
+            header.insertAdjacentHTML("beforeend", "<div class='right'><div id='close-button' title='Close'><i class='far fa-times-circle'></i></div></div>");
+
+            createGallery();
+            document.getElementById("cover").classList.replace("hide-cover", "show-cover");
+          });
+      }
+    });
+  });
 });
+
+getTheme = () => {
+  let b = document.cookie.match('(^|;)\\s*theme\\s*=\\s*([^;]+)');
+  return b ? b.pop() : undefined;
+}
+
+setTheme = (theme) => {
+  document.cookie = `theme=${theme}; expires=Fri, 31 Dec 9999 23:59:59 GMT; sameSite=strict`;
+}

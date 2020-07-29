@@ -430,7 +430,7 @@ footer {
 }
 
 /*####PROJECT POPUP STYLES*/
-.cover {
+#cover {
     position: fixed;
     z-index: 100;
     top: 0;
@@ -440,6 +440,18 @@ footer {
     min-height: 100vh;
 
     background-color: rgba(0, 0, 0, .75);
+}
+
+.show-cover {
+    transition: opacity 300ms;
+
+    opacity: 1;
+}
+
+.hide-cover {
+    transition: opacity 300ms;
+
+    opacity: 0;
 }
 
 .page-content-center .center-window {
@@ -475,7 +487,7 @@ footer {
     object-fit: contain;
 }
 
-.close-button {
+#close-button {
     font-size: 2em;
 
     float: right;
@@ -491,6 +503,7 @@ footer {
     flex-direction: column;
 
     width: 70%;
+    margin-bottom: 1em;
     padding: .5em;
 
     background-color: #E0E0E0;
@@ -731,5 +744,29 @@ img#selected-image {
     .error {
         width: 10em;
         height: 10em;
+    }
+
+    .project-popup-content {
+        max-width: 95%;
+    }
+
+    .gallery {
+        width: 95%;
+    }
+
+    #prev-button {
+        margin-left: .25em;
+    }
+
+    #next-button {
+        margin-right: .25em;
+    }
+
+    #gallery-image {
+        height: 10em;
+    }
+
+    #gallery-images img {
+        height: 4em;
     }
 }
