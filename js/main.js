@@ -54,6 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>`
         );
 
+        // small delay before making visible - fade in animation doesn't work otherwise
+        setTimeout(() => document.getElementById("cover").classList.replace("hide-cover", "show-cover"), 50);
+
         fetch(`/project_content/${elem.id}`)
           .then(r => r.text())
           .then(t => {
@@ -66,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
             header.insertAdjacentHTML("beforeend", "<div class='right'><div id='close-button' title='Close'><i class='far fa-times-circle'></i></div></div>");
 
             createGallery();
-            document.getElementById("cover").classList.replace("hide-cover", "show-cover");
           });
       }
     });

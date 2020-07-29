@@ -33,27 +33,43 @@
         <h2>AutoTag</h2>
       </header>
       <div class="project-popup-content">
-        <p>AutoTag is a utility for automatically tagging and renaming TV show episodes written in C#. AutoTag
+        <p>
+          AutoTag is a utility written in C# for automatically tagging and renaming TV show episodes or films. AutoTag
           was inspired by an application I had been using for several years, <a
             href="https://sourceforge.net/projects/autotvtagger/">Auto TV Tagger</a>, which performs the
           same function, but I always had a few issues with it, namely that it often failed to give useful
           error messages and couldn't handle invalid file name characters, meaning that I had to manually tag
           some files, which was annoying. I was unable to find any other alternatives which fulfilled my
           requirements of both renaming and tagging automatically, so I decided to create my own solution
-          instead.</p>
+          instead.
+        </p>
 
-        <p>Despite being my first C# project, development of AutoTag went smoothly and quickly, probably due to
+        <p>
+          Despite being my first C# project, development of AutoTag went smoothly and quickly, probably due to
           the fact that C# basically only differs from Visual Basic.NET in syntax. I did struggle to get some
           of the API working due to quite poor documentation, but because the source code for the wrapper was
           available, I could work it out quite easily from that. This project also taught me about the use of
           <code>async</code> and <code>await</code> instead of the BackgroundWorker method I had previously
-          been using, which I actually found to be much easier to work with than the BackgroundWorker.</p>
+          been using, which I actually found to be much easier to work with than the BackgroundWorker.
+        </p>
 
-        <p>AutoTag uses data from <a href="https://www.thetvdb.com/">thetvdb.com</a> using their free API,
-          accessed through the <a href="https://github.com/HristoKolev/TvDbSharper">TvDbSharper</a> wrapper.
-          File name parsing is provided by a part of <a
-            href="https://github.com/pheiberg/SubtitleFetcher">SubtitleFetcher</a> and file tagging is
-          provided by <a href="https://github.com/mono/taglib-sharp">taglib-sharp</a>.</p>
+        <p>
+          In summer 2020, I released version 3, which is a rewrite of AutoTag using .NET Core. This allows AutoTag to be
+          run natively on Linux, without Mono. AutoTag v3 also has a fully-functional command-line interface, which is
+          useful when tagging files on my headless media server. However, v3 has only a command-line interface, not a
+          graphical interface. This is because creating a cross-platform GUI is currently quite difficult due to the poor
+          documentation of any frameworks that support both Windows and Linux. AutoTag v3 has been designed such that
+          the core functionality is separated, which should allow a GUI version to be more easily created in the future.
+        </p>
+
+        <p>
+          AutoTag uses data from <a href="https://www.thetvdb.com/">thetvdb.com</a> and
+          <a href="https://www.themoviedb.org/">themoviedb.org</a> using their free APIs, accessed through the
+          <a href="https://github.com/HristoKolev/TvDbSharper">TvDbSharper</a> and
+          <a href="https://github.com/LordMike/TMDbLib">TMDbLib</a> wrappers. File name parsing is provided by a part of
+          <a href="https://github.com/pheiberg/SubtitleFetcher">SubtitleFetcher</a> and file tagging is provided by
+          <a href="https://github.com/mono/taglib-sharp">taglib-sharp</a>.
+        </p>
 
         <p>Source code and binaries are available on my GitHub <a href="https://github.com/jamerst/AutoTag">here</a>.
         </p>

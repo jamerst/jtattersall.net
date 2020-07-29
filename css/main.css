@@ -465,6 +465,7 @@ footer {
     overflow-y: auto;
     flex-direction: column;
 
+    max-width: calc(100% + 1em);
     margin: -.5em -1em -1em -1em;
     padding: .5em;
 
