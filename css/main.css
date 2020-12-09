@@ -1,14 +1,35 @@
+:root {
+    --text: #212121;
+    --page-back: #FFFFFF;
+    --link-visited: #616161;
+    --center-window-back: #FAFAFA;
+    --skill-hover: #EEEEEE;
+    --skill-list-mob-sep: #BDBDBD;
+    --level: #BDBDBD;
+    --level-filled: #303F9F;
+    --level-hover: var(--level);
+    --project-back: var(--center-window-back);
+    --project-back-hover: #EEEEEE;
+    --gallery-back: #E0E0E0;
+    --footer-links: #616161;
+}
+
 /*####GENERAL ELEMENT STYLES####*/
 body {
     font-family: "Roboto", sans-serif;
 
     display: flex;
     overflow: hidden;
+    /* Don't scroll body, scroll page-content instead to allow sticky header */
+    /* Can't use position: sticky on header as this breaks scrollIntoView */
     flex-direction: column;
 
     max-height: 100vh;
     margin: 0;
     padding: 0;
+
+    color: var(--text);
+    background-color: var(--page-back);
 }
 
 h1 {
@@ -60,11 +81,11 @@ p:last-child {
 }
 
 a:link {
-    color: black;
+    color: var(--text);
 }
 
 a:visited {
-    color: #616161;
+    color: var(--link-visited);
 }
 
 a:hover {
@@ -291,14 +312,14 @@ footer {
     display: flex;
     flex-direction: column;
 
-    width: 60vw;
+    width: 62.5vw;
     margin-bottom: 2em;
     padding: 0 1em 1em 1em;
 
     text-align: center;
 
     border-radius: .1em;
-    background-color: #FAFAFA;
+    background-color: var(--center-window-back);
     box-shadow: 0 .2em .4em 0 rgba(0, 0, 0, .50);
 
     align-items: center;
@@ -319,6 +340,166 @@ footer {
 
     max-width: 70%;
 }
+
+.skills h3 {
+    max-width: unset;
+    margin-bottom: -1rem;
+}
+
+.skills .lists {
+    display: flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lists ul {
+    width: 23em;
+    margin: 1rem .75em 0;
+
+    text-align: left;
+}
+
+.skills ul li {
+    font-size: 120%;
+
+    display: flex;
+
+    padding: .25em;
+
+    transition: .25s ease;
+
+    justify-content: space-between;
+    align-items: center;
+    --n: 20;
+}
+
+.skills ul li:hover {
+    background: var(--skill-hover);
+}
+
+.skills ul li:nth-child(1) {
+    --n: 0;
+}
+.skills ul li:nth-child(2) {
+    --n: 1;
+}
+.skills ul li:nth-child(3) {
+    --n: 2;
+}
+.skills ul li:nth-child(4) {
+    --n: 3;
+}
+.skills ul li:nth-child(5) {
+    --n: 4;
+}
+.skills ul li:nth-child(6) {
+    --n: 5;
+}
+.skills ul li:nth-child(7) {
+    --n: 6;
+}
+.skills ul li:nth-child(8) {
+    --n: 7;
+}
+.skills ul li:nth-child(9) {
+    --n: 8;
+}
+.skills ul li:nth-child(10) {
+    --n: 9;
+}
+.skills ul li:nth-child(11) {
+    --n: 10;
+}
+.skills ul li:nth-child(12) {
+    --n: 11;
+}
+.skills ul li:nth-child(13) {
+    --n: 12;
+}
+.skills ul li:nth-child(14) {
+    --n: 13;
+}
+.skills ul li:nth-child(15) {
+    --n: 14;
+}
+.skills ul li:nth-child(16) {
+    --n: 15;
+}
+.skills ul li:nth-child(17) {
+    --n: 16;
+}
+.skills ul li:nth-child(18) {
+    --n: 17;
+}
+.skills ul li:nth-child(19) {
+    --n: 18;
+}
+.skills ul li:nth-child(20) {
+    --n: 19;
+}
+
+.level {
+    margin-left: .5em;
+
+    white-space: nowrap;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.level i {
+    display: inline-block;
+
+    width: 1em;
+    height: 1em;
+    margin-right: .5em;
+
+    transition: .25s ease;
+    animation: .35s linear 0s 1 normal both running fadeIn;
+
+    border-radius: 50%;
+    background-color: var(--level);
+}
+
+li:hover .level i:not(.filled) {
+    background-color: var(--level-hover);
+}
+
+.level i.filled {
+    background-color: var(--level-filled);
+}
+
+.level i:nth-of-type(1) {
+    animation-delay: calc(var(--n) * .25s);
+}
+
+.level i:nth-of-type(2) {
+    animation-delay: calc(var(--n) * .25s + .1s);
+}
+
+.level i:nth-of-type(3) {
+    animation-delay: calc(var(--n) * .25s + .2s);
+}
+
+.level i:nth-of-type(4) {
+    animation-delay: calc(var(--n) * .25s + .3s);
+}
+
+.level i:nth-of-type(5) {
+    animation-delay: calc(var(--n) * .25s + .4s);
+}
+
+.level i:last-child {
+    margin-right: 0;
+}
+
 
 /*####COMPONENT STYLES*/
 
@@ -344,6 +525,10 @@ footer {
 
 .links a:link {
     color: #616161;
+}
+
+.links i {
+    color: var(--footer-links);
 }
 
 .links i:hover {
@@ -373,13 +558,14 @@ footer {
 
     cursor: pointer;
 
+    background-color: var(--project-back);
     box-shadow: 0 .2em .4em 0 rgba(0, 0, 0, .50);
 }
 
 .project-entry:hover {
     transition: .3s;
 
-    background-color: #EEEEEE;
+    background-color: var(--project-back-hover);
     box-shadow: 0 .4em .8em 0 rgba(0, 0, 0, .7);
 }
 
@@ -509,7 +695,7 @@ footer {
     margin-bottom: 1em;
     padding: .5em;
 
-    background-color: #E0E0E0;
+    background-color: var(--gallery-back);
 }
 
 #gallery-image {
@@ -718,6 +904,41 @@ img#selected-image {
 
     .error-window {
         width: 90vw;
+    }
+
+    .skills {
+        width: 95%;
+    }
+
+    .skills h3 {
+        font-size: 110%;
+    }
+
+    .skills .lists {
+        flex-direction: column;
+    }
+
+    .lists ul {
+        width: auto;
+        margin-right: 0;
+        margin-left: 0;
+        padding-top: 1rem;
+
+        border-top: 3px solid var(--skill-list-mob-sep);
+    }
+
+    .lists ul:first-of-type {
+        padding-top: 0;
+
+        border-top: none;
+    }
+
+    .lists ul li {
+        font-size: 80%;
+    }
+
+    .level {
+        margin-left: 1em;
     }
 
     .project-entry {

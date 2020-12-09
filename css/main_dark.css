@@ -1,32 +1,15 @@
-body {
-    color: white;
-    background-color: #212121;
-}
-
-a:link {
-    color: white;
-}
-
-a:visited {
-    color: #9E9E9E;
-}
-
-.links i {
-    color: #9E9E9E;
-}
-
-.center-window {
-    background-color: #424242;
-}
-
-.project-entry {
-    background-color: #616161;
-}
-
-.project-entry:hover {
-    background-color: #757575;
-}
-
-.gallery {
-    background-color: #616161;
+:root {
+    --text: #fff;
+    --page-back: #212121;
+    --link-visited: #9E9E9E;
+    --center-window-back: #424242;
+    --skill-hover: #616161;
+    --skill-list-mob-sep: #616161;
+    --level: #616161;
+    --level-filled: #5C6BC0;
+    --level-hover: #757575;
+    --project-back: #616161;
+    --project-back-hover: #757575;
+    --gallery-back: #616161;
+    --footer-links: #9E9E9E;
 }
