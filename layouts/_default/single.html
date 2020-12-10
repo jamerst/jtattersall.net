@@ -1,0 +1,27 @@
+{{ define "header" }}
+<header class="main-header">
+  <h1>James Tattersall</h1>
+  <nav>
+    <ul>
+      <li><a href="../../#projects">Back to Projects</a></li>
+    </ul>
+  </nav>
+</header>
+{{ end }}
+
+{{ define "main" }}
+<div class="center-window">
+  <header>
+    <h2>{{ .Title }}</h2>
+  </header>
+  <div class="project-popup-content">
+    {{ .Content }}
+    <noscript class="image-container">
+      {{ range .Params.images }}
+        <img src="{{ .file }}" alt="{{ .alt }}">
+      {{ end }}
+    </noscript>
+  </div>
+</div>
+</div>
+{{ end }}

@@ -1,0 +1,18 @@
+<div class="project-entry" data-url="{{ .Permalink }}">
+  <div class="project-img">
+    <img src="{{ (.Resources.GetMatch .Params.summaryImage.file).Permalink }}" alt="{{ .Params.summaryImage.alt }}" loading="lazy">
+  </div>
+  <div class="project-content">
+    <h2>{{ .Title }}</h2>
+    <h4><i class='far fa-calendar-alt'></i>{{ .Params.duration }}</h4>
+    {{ .Description }}
+    <noscript><a href="{{.Permalink}}">Read more..</a></noscript>
+  </div>
+  <div class="project-tags">
+    <ul>
+      {{ range .Params.tags }}
+        <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
