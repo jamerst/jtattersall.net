@@ -16,11 +16,16 @@
   </header>
   <div class="project-popup-content">
     {{ .Content }}
-    <noscript class="image-container">
-      {{ range .Params.images }}
-        <img src="{{ .file }}" alt="{{ .alt }}">
-      {{ end }}
-    </noscript>
+
+    {{ if len .Params.images }}
+      <noscript class="image-container">
+        {{ range .Params.images }}
+          {{ if .file }}
+            <img src="{{ ($.Resources.GetMatch .file).Permalink }}" alt="{{ .alt }}">
+          {{ end }}
+        {{ end }}
+      </noscript>
+    {{ end }}
   </div>
 </div>
 </div>

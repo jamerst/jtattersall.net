@@ -1,6 +1,8 @@
 <div class="project-entry" data-url="{{ .Permalink }}">
   <div class="project-img">
-    <img src="{{ (.Resources.GetMatch .Params.summaryImage.file).Permalink }}" alt="{{ .Params.summaryImage.alt }}" loading="lazy">
+    {{ if .Params.summaryImage.file }}
+      <img src="{{ (.Resources.GetMatch .Params.summaryImage.file).Permalink }}" alt="{{ .Params.summaryImage.alt }}" loading="lazy">
+    {{ end }}
   </div>
   <div class="project-content">
     <h2>{{ .Title }}</h2>
