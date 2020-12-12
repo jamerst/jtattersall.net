@@ -3,11 +3,18 @@ title: OpenLD
 duration: October 2019 - May 2020
 description: A web-based system for creating lighting designs collaboratively with live-editing functionality. Created as my final year project at the University of Warwick.
 tags: ["C#", "ASP.NET Core", "React.js"]
-skills: [""]
+skills: ["C#", "ASP.NET Core"]
 summaryImage: {file: "openld.svg", alt: "OpenLD Logo"}
-images: [{file: "openld_home.png", alt: "OpenLD Home"}, {file: "openld_editor.png", alt: "OpenLD Editor"}]
-archived: 0
-startDate: 2020-10-02
+images: [
+    {file: "openld_home.png", alt: "OpenLD Home"},
+    {file: "openld_editor.png", alt: "OpenLD Editor"},
+    {file: "openld_library.png", alt: "OpenLD Fixture Library"},
+    {file: "openld_exported.png", alt: "Drawing exported from OpenLD"},
+    {file: "er.png", alt: "Entity-Relationship Diagram"},
+    {file: "dissertation.png", alt: "Dissertation on the process of creating OpenLD"}
+]
+archived: false
+startDate: 2019-10-02
 ---
 
 OpenLD is a collaborative CAD system for creating lighting designs. It allows multiple people to work on a CAD

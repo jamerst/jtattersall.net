@@ -6,7 +6,7 @@ tags: ["C++", "LLVM"]
 skills: [""]
 summaryImage: {file: "mini-c.webp", alt: "Compiler Code Sample"}
 images: []
-archived: 0
+archived: false
 startDate: 2019-10-01
 ---
 

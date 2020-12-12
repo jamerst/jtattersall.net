@@ -1,0 +1,24 @@
+{
+    "skills": [
+      {
+        "name": "Git",
+        "level": 4,
+        "description": "Description"
+      },
+      {
+        "name": "Linux",
+        "level": 4,
+        "description": "Description"
+      },
+      {
+        "name": "Agile Development",
+        "level": 3,
+        "description": "Description"
+      },
+      {
+        "name": "Docker",
+        "level": 3,
+        "description": "Description"
+      }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "skills": [
+      {
+        "name": "HTML & CSS",
+        "level": 5,
+        "description": "Description fdkjshfjkdhskjfh sdmfhkjdshfjkd dsjhfj fdjshfj fdjshfkdshjf"
+      },
+      {
+        "name": "C#",
+        "level": 4,
+        "description": "Description"
+      },
+      {
+        "name": "Java",
+        "level": 4,
+        "description": "Description"
+      },
+      {
+        "name": "JavaScript & TypeScript",
+        "level": 4,
+        "description": "Description"
+      },
+      {
+        "name": "PHP",
+        "level": 4,
+        "description": "Description"
+      },
+      {
+        "name": "SQL",
+        "level": 4,
+        "description": "Description"
+      },
+      {
+        "name": "C++",
+        "level": 3,
+        "description": "Description"
+      },
+      {
+        "name": "Python",
+        "level": 3,
+        "description": "Description"
+      }
+    ]
+  }

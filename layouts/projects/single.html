@@ -17,6 +17,12 @@
   <div class="project-popup-content">
     {{ .Content }}
 
+    {{ if .Params.video }}
+      <div class="image-container">
+        <video loop controls src="{{ (.Resources.GetMatch .Params.video).Permalink }}" type="video/webm" title="CS257 Program Visualisation"></video>
+      </div>
+    {{ end }}
+
     {{ if len .Params.images }}
       <noscript class="image-container">
         {{ range .Params.images }}

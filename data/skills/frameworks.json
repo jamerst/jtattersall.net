@@ -1,0 +1,29 @@
+{
+  "skills": [
+    {
+      "name": "ASP.NET Core",
+      "level": 4,
+      "description": "Description"
+    },
+    {
+      "name": "CakePHP",
+      "level": 4,
+      "description": "Description"
+    },
+    {
+      "name": "React.js",
+      "level": 4,
+      "description": "Description"
+    },
+    {
+      "name": "SignalR",
+      "level": 3,
+      "description": "Description"
+    },
+    {
+      "name": "Android SDK",
+      "level": 2,
+      "description": "Description"
+    }
+  ]
+}
