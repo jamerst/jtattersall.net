@@ -3,7 +3,7 @@ title: jtattersall.net
 duration: June 2018 - Present
 description: This very website. Created to provide an online portfolio for information about my interests and projects.
 tags: ["HTML", "CSS", "JavaScript", "Hugo"]
-skills: [""]
+skills: ["html-css"]
 summaryImage: {file: "logo.svg", alt: "Website logo"}
 images: []
 archived: false
@@ -27,5 +27,11 @@ In version 2, I also created my own simple image gallery to better showcase imag
 is designed such that the site is still usable even with JavaScript disabled by utilising
 `noscript` tags to store the images, then using JavaScript to extract the images when it is
 enabled. This allows both JavaScript enabled and disabled pages to be created without duplicating any content.
+
+In version 2.1, I migrated the site to use the [Hugo](https://gohugo.io/) static site generator. This allowed me to
+reduce the amount of repetition in the site significantly and automate the building of the site. Instead of needing to
+create copies of file to add new projects, I can now simply create a markdown file, add the project content to it, and
+build the site. This generates all the necessary HTML files using preconfigured templates. This allows me to add more
+content to the site which would otherwise be very tedious to manually write, such as the skills section.
 
 Source code available on my GitHub [here](https://github.com/jamerst/jtattersall.net).

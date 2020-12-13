@@ -3,7 +3,7 @@ title: CueBright
 duration: August 2017
 description: A Windows application to control the colour and brightness of a Corsair CUE-enabled keyboard using command-line arguments.
 tags: ["Visual Basic", "3rd Party APIs"]
-skills: [""]
+skills: []
 summaryImage: {file: "cuebright.png", alt: "CueBright logo"}
 images: []
 archived: true

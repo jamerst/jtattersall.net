@@ -1,0 +1,15 @@
+<div class="skills">
+  <h3>Skills &amp; Experience</h3>
+  <div class="lists">
+    <ul>
+      {{ partial "skill-category.html" (dict "skills" .Site.Data.skills.languages.skills "context" $ )}}
+    </ul>
+    <ul>
+      {{ partial "skill-category.html" (dict "skills" .Site.Data.skills.frameworks.skills "context" $ )}}
+    </ul>
+    <ul>
+      {{ partial "skill-category.html" (dict "skills" .Site.Data.skills.other.skills "context" $ )}}
+    </ul>
+  </div>
+  <noscript>(Enable JavaScript to see more details)</noscript>
+</div>

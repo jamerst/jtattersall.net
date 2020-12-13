@@ -3,7 +3,7 @@ title: OpenLD
 duration: October 2019 - May 2020
 description: A web-based system for creating lighting designs collaboratively with live-editing functionality. Created as my final year project at the University of Warwick.
 tags: ["C#", "ASP.NET Core", "React.js"]
-skills: ["C#", "ASP.NET Core"]
+skills: ["c#", "aspnetcore", "docker", "react", "signalr", "js"]
 summaryImage: {file: "openld.svg", alt: "OpenLD Logo"}
 images: [
     {file: "openld_home.png", alt: "OpenLD Home"},

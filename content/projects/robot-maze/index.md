@@ -3,7 +3,7 @@ title: Robot Maze
 duration: October - December 2017
 description: A Java project to guide a robot through a virtual maze for CS118 Programming for Computer Scientists coursework.
 tags: ["Java"]
-skills: [""]
+skills: ["java"]
 summaryImage: {file: "prim.png", alt: "Screenshot of maze"}
 images: [{file: "prim.png", alt: "Solved maze"}, {file: "loopy.png", alt: "Solved maze with loops"}]
 archived: true

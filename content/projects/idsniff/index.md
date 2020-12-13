@@ -3,7 +3,7 @@ title: Intrusion Detection System
 duration: October - November 2018
 description: A multithreaded C application for detecting suspicious packets. Coursework for CS241 Operating Systems and Networks.
 tags: ["C", "Multithreading", "Networking"]
-skills: [""]
+skills: ["c"]
 summaryImage: {file: "idsniff.webp", alt: "Sample program output"}
 images: [{file: "idsniff.webp", alt: "Sample program output"}]
 archived: false

@@ -1,29 +1,34 @@
 {
   "skills": [
     {
+      "id": "aspnetcore",
       "name": "ASP.NET Core",
       "level": 4,
-      "description": "Description"
+      "description": "ASP.NET Core is my current back-end web framework of choice. I have built several applications using it, including my final year project. I particularly like the modern design using Dependency Injection, plethora of features and cross-platform support."
     },
     {
+      "id": "cake",
       "name": "CakePHP",
       "level": 4,
-      "description": "Description"
+      "description": "I used CakePHP during my internship at a software company in summer 2019. I am confident in using CakePHP 2.x to build complex systems."
     },
     {
+      "id": "react",
       "name": "React.js",
       "level": 4,
-      "description": "Description"
+      "description": "React.js is my current front-end framework of choice. I have used it to build several applications, most notably the front-end for my final year project. I like how it reduces the amount of boilerplate code significantly, and avoids tedious and error-prone manual DOM manipulation."
     },
     {
+      "id": "signalr",
       "name": "SignalR",
       "level": 3,
-      "description": "Description"
+      "description": "I used SignalR to implement real-time bi-directional communication between clients and the server for my final year project. I like how it integrates seamlessly with ASP.NET Core and abstracts away the websocket-based communication layer."
     },
     {
+      "id": "android",
       "name": "Android SDK",
       "level": 2,
-      "description": "Description"
+      "description": "I have a little experience with building Android applications using Java. I'd like to gain more experience by building a more complex application in the near future, probably using Kotlin."
     }
   ]
 }

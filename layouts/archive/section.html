@@ -1,0 +1,21 @@
+{{ define "nav" }}
+  <li><a href="../../#projects">Back to Home</a></li>
+{{ end }}
+
+{{ define "main" }}
+<div class="center-window">
+  <header>
+    <h2>{{ .Title }}</h2>
+  </header>
+  {{ .Content }}
+  <div class="projects-container">
+    {{ $listed := first 8 (sort (where (where .Site.RegularPages "Section" "projects") ".Params.archived" "==" false) ".Params.startDate" "desc") }}
+    {{ range sort (where .Site.RegularPages "Section" "projects") ".Params.startDate" "desc" }}
+      {{ if not (in $listed .) }}
+        {{ partial "project-summary.html" . }}
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+</div>
+{{ end }}

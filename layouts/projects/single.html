@@ -1,12 +1,5 @@
-{{ define "header" }}
-<header class="main-header">
-  <h1>James Tattersall</h1>
-  <nav>
-    <ul>
-      <li><a href="../../#projects">Back to Projects</a></li>
-    </ul>
-  </nav>
-</header>
+{{ define "nav" }}
+  <li><a href="../../#projects">Back to Projects</a></li>
 {{ end }}
 
 {{ define "main" }}
@@ -19,7 +12,7 @@
 
     {{ if .Params.video }}
       <div class="image-container">
-        <video loop controls src="{{ (.Resources.GetMatch .Params.video).Permalink }}" type="video/webm" title="CS257 Program Visualisation"></video>
+        <video loop controls src="{{ (.Resources.GetMatch .Params.video.file).Permalink }}" type="{{ .Params.video.mimeType }}" title="{{ .Params.video.alt }}"></video>
       </div>
     {{ end }}
 
@@ -33,6 +26,5 @@
       </noscript>
     {{ end }}
   </div>
-</div>
 </div>
 {{ end }}

@@ -3,7 +3,7 @@ title: Bill Ninja
 duration: February - March 2018
 description: A PHP web app for students splitting bills in shared housing. Coursework for CS139 Web Development Technologies.
 tags: ["PHP", "SQL", "JS & jQuery", "CSS"]
-skills: [""]
+skills: ["html-css", "php", "js", "sql"]
 summaryImage: {file: "bill_ninja.svg", alt: "Bill Ninja logo"}
 images: [
     {file: "login.png", alt: "Bill Ninja Login"},

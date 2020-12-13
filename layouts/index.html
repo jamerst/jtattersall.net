@@ -1,0 +1,47 @@
+{{ define "nav" }}
+  <li class="current-page"><a href="#about">About Me</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#links">Links</a></li>
+{{ end }}
+
+{{ define "main" }}
+<div class="center-window top" id="about">
+  <header>
+    <h2>About Me</h2>
+  </header>
+
+  {{ .Content }}
+
+  {{ partial "skills.html" . }}
+</div>
+
+<div class="center-window" id="projects">
+  <header>
+    <h2>Projects</h2>
+  </header>
+  <ul class="projects-container">
+    {{ range first 8 (sort (where (where .Site.RegularPages "Section" "projects") ".Params.archived" "==" false) ".Params.startDate" "desc") }}
+      {{ partial "project-summary.html" . }}
+    {{ end }}
+  </ul>
+  <p>
+    View more of my projects in the <a href="/archive">archive</a>.
+  </p>
+</div>
+
+<div class="center-window" id="links">
+  <header>
+    <h2>Links</h2>
+  </header>
+  <div class="links">
+    <a href="mailto:contact@jtattersall.net"><i class="fa fa-envelope"></i>Email Me</a>
+    <a href="https://github.com/jamerst"><i class="fab fa-github"></i>My GitHub</a>
+    <a href="https://www.linkedin.com/in/james-tattersall/"><i class="fab fa-linkedin"></i>My LinkedIn</a>
+  </div>
+
+  <p>
+    <a href="https://fontawesome.com/">Site Icons</a><br>
+    <a href="https://meyerweb.com/eric/tools/css/reset/">Eric Meyer's Reset CSS</a>
+  </p>
+</div>
+{{ end }}

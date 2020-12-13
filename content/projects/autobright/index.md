@@ -3,7 +3,7 @@ title: AutoBright
 duration: August 2016 - April 2018
 description: A Windows application to dim monitor backlights on a schedule determined by sunrise/sunset times via DDC/CI.
 tags: ["Visual Basic", "DDC/CI", "WinAPI"]
-skills: [""]
+skills: []
 summaryImage: {file: "autobright.webp", alt: "AutoBright logo"}
 images: [{file: "settings.png", alt: "AutoBright settings"}]
 archived: true

@@ -73,6 +73,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  [...document.getElementsByClassName("skill-display")].forEach(elem => {
+    elem.addEventListener("click", (e) => {
+      [...document.getElementsByClassName("skill-open")].forEach(open => { open.classList.remove("skill-open") });
+      e.currentTarget.parentElement.classList.add("skill-open");
+    });
+  })
 });
 
 getTheme = () => {

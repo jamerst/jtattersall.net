@@ -1,4 +1,4 @@
-<div class="project-entry" data-url="{{ .Permalink }}">
+<li class="project-entry" data-url="{{ .Permalink }}">
   <div class="project-img">
     {{ if .Params.summaryImage.file }}
       <img src="{{ (.Resources.GetMatch .Params.summaryImage.file).Permalink }}" alt="{{ .Params.summaryImage.alt }}" loading="lazy">
@@ -17,4 +17,4 @@
       {{ end }}
     </ul>
   </div>
-</div>
+</li>

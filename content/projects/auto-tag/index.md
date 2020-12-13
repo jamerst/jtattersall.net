@@ -3,7 +3,7 @@ title: AutoTag
 duration: August 2018 - Present
 description: A C# application for automatically tagging and renaming TV episodes and films based on the filename.
 tags: ["C#", "Web APIs", "Metadata tagging"]
-skills: [""]
+skills: ["c#"]
 summaryImage: {file: "auto_tag.webp", alt: "AutoTag logo"}
 images: [{file: "v2.png", alt: "AutoTag v2 interface"}]
 archived: false

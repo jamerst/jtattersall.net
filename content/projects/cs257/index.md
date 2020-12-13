@@ -3,10 +3,10 @@ title: Scientific Code Optimisation
 duration: February - March 2019
 description: Optimising an N-body simulation program using various techniques. Coursework for CS257 Advanced Computer Architecture.
 tags: ["C", "Multithreading", "Vectorisation"]
-skills: [""]
+skills: ["c"]
 summaryImage: {file: "cs257.webp", alt: "Screenshot of program visualisation"}
 images: []
-video: "cs257.webm"
+video: {file: "cs257.webm", alt: "CS257 Program Visualisation", mimeType: "video/webm"}
 archived: false
 startDate: 2019-02-01
 ---

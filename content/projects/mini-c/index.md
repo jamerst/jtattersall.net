@@ -3,7 +3,7 @@ title: Mini-C Compiler
 duration: October - November 2019
 description: A compiler for a subset of the C language created using the LLVM compiler framework. Coursework for CS325 Compiler Design.
 tags: ["C++", "LLVM"]
-skills: [""]
+skills: ["cpp"]
 summaryImage: {file: "mini-c.webp", alt: "Compiler Code Sample"}
 images: []
 archived: false

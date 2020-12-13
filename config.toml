@@ -1,3 +1,7 @@
 baseURL = "https://jtattersall.net"
 languageCode = "en-gb"
 title = "James Tattersall"
+
+[params]
+    version = "2.1.0"
+    contactEmail = "contact@jtattersall.net"

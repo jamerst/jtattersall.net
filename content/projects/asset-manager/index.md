@@ -3,7 +3,7 @@ title: Asset Manager
 duration: October 2016 - March 2017
 description: A Windows application to track and monitor company assets. Created for Computer Science A Level coursework.
 tags: ["Visual Basic", ".NET WinForms", "SQL"]
-skills: [""]
+skills: []
 summaryImage: {file: "summary.png", alt: "Screenshot of asset manager"}
 images: [{file: "list.png", alt: "Asset list view"}, {file: "details.png", alt: "Asset details"}, {file: "summary.png", alt: "System overview, showing asset locations and statistics utilising Google Maps API"}]
 archived: true

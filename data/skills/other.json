@@ -1,24 +1,28 @@
 {
     "skills": [
       {
+        "id": "git",
         "name": "Git",
         "level": 4,
-        "description": "Description"
+        "description": "Git is my version control system of choice. I have used Git for almost every project since first learning about it my first year at university. I like the speed, reliability and complete flexibility, especially compared to competing solutions such as Microsoft TFVC, which I find to be very slow and unreliable."
       },
       {
+        "id": "linux",
         "name": "Linux",
         "level": 4,
-        "description": "Description"
+        "description": "Linux is my daily operating system for my personal devices, so I also prefer to work with it on projects. I like the speed, customisability, stability, and _far_ superior command line environment compared to Windows.\n\nSince I use it every day on my personal machine and file server I am experienced in administering Linux servers."
       },
       {
+        "id": "agile",
         "name": "Agile Development",
         "level": 3,
-        "description": "Description"
+        "description": "I worked with a team that wholly embraced Agile and Lean principles during my internship in summer 2019. This showed me how well it can work, and how it supports developers in their work by creating a more stable work environment."
       },
       {
+        "id": "docker",
         "name": "Docker",
         "level": 3,
-        "description": "Description"
+        "description": "I have used Docker on a few projects involving web apps. I find it to be extremely useful for both deployment and development as the containers allow dependencies to be built-in and preconfigured, avoiding the need for manually configuring dependencies wherever a project needs to be run. I would like to gain more experience using Docker for larger projects, and utilising it in Continuous Integration."
       }
     ]
 }
