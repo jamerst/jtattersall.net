@@ -1,6 +1,7 @@
 baseURL = "https://jtattersall.net"
 languageCode = "en-gb"
 title = "James Tattersall"
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
     version = "2.1.0"
