@@ -307,6 +307,7 @@ footer {
     padding-top: 1.5em;
 
     align-items: center;
+    justify-content: space-between;
     flex-grow: 1;
 }
 
@@ -552,14 +553,15 @@ li:not(.skill-open):hover .level i:nth-last-child(2) {
     max-height: 0;
     padding: 0 .5em;
 
-    transition: .25s ease;
+    transition: .25s;
+    transition-delay: 0s;
 }
 
 li.skill-open .skill-description {
     max-height: 100vh;
     padding: .5em;
 
-    transition: .15s ease;
+    transition-delay: .15s;
 }
 
 .skill-description p {
@@ -654,7 +656,13 @@ li.skill-open .skill-description {
     margin-bottom: .3em;
 }
 
-.project-content h4 i {
+.project-content h3 {
+    font-size: 100%;
+    max-width: none;
+    margin-bottom: 1em;
+}
+
+.project-content h3 i {
     margin-right: .5em;
 }
 
@@ -898,8 +906,10 @@ img#selected-image {
 
     background-color: #9E9E9E;
 
-    mask-image: url(../img/error.svg);
+    mask-image: url(/img/error.svg);
+    -webkit-mask-image: url(/img/error.svg);
     mask-size: cover;
+    -webkit-mask-size: cover;
 }
 
 @media only screen and (max-device-width: 480px) {

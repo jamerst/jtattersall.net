@@ -9,9 +9,11 @@
 
   <title>{{ with .Params.Title }}{{ . }} | {{end}}{{ .Site.Title }}</title>
 
-  <link rel="preload" as="script" href="/js/theme.js" />
+  {{ $theme := resources.Get "js/theme.js" | resources.Minify | resources.Fingerprint }}
+  <link rel="preload" as="script" href="{{ $theme.Permalink }}" integrity="{{ $theme.Data.Integrity }}"/>
 
-  <link href="/css/main.css" type="text/css" rel="stylesheet" />
+  {{ $mainCss := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
+  <link href="{{ $mainCss.Permalink }}" type="text/css" rel="stylesheet" integrity="{{ $mainCss.Data.Integrity }}" />
   <link rel="icon" href="/img/logo.png" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -58,10 +60,13 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
   integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
-<link href="/css/reset.css" type="text/css" rel="stylesheet" />
-<link href="/css/main.css" type="text/css" rel="stylesheet" />
+{{ $reset := resources.Get "css/reset.css" | resources.Minify | resources.Fingerprint }}
+<link href="{{ $reset.Permalink }}" type="text/css" rel="stylesheet" integrity="{{ $reset.Data.Integrity }}" />
+<link href="{{ $mainCss.Permalink }}" type="text/css" rel="stylesheet" />
 
-<script defer src="/js/gallery.js"></script>
-<script defer src="/js/main.js"></script>
-<script src="/js/theme.js"></script>
+{{ $gallery := resources.Get "js/gallery.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $gallery.Permalink }}" integrity="{{ $gallery.Data.Integrity }}"></script>
+{{ $mainJs := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $mainJs.Permalink }}" integrity="{{ $mainJs.Data.Integrity }}"></script>
+<script src="{{ $theme.Permalink }}" integrity="{{ $theme.Data.Integrity }}"></script>
 </html>
