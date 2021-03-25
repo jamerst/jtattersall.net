@@ -33,10 +33,8 @@ graphical interface. This is because creating a cross-platform GUI is currently 
 documentation of any frameworks that support both Windows and Linux. AutoTag v3 has been designed such that
 the core functionality is separated, which should allow a GUI version to be more easily created in the future.
 
-AutoTag uses data from [thetvdb.com](https://www.thetvdb.com/) and
-[themoviedb.org](https://www.themoviedb.org/) using their free APIs, accessed through the
-[TvDbSharper](https://github.com/HristoKolev/TvDbSharper) and
-[TMDbLib](https://github.com/LordMike/TMDbLib) wrappers. File name parsing is provided by a part of
+AutoTag uses data from [themoviedb.org](https://www.themoviedb.org/) using their free API, accessed through the
+[TMDbLib](https://github.com/LordMike/TMDbLib) wrapper. File name parsing is provided by a part of
 [SubtitleFetcher](https://github.com/pheiberg/SubtitleFetcher) and file tagging is provided by
 [taglib-sharp](https://github.com/mono/taglib-sharp).
 
