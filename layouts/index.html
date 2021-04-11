@@ -1,47 +1,29 @@
 {{ define "nav" }}
-  <li class="current-page"><a href="#about">About Me</a></li>
+  <li class="current"><a href="#about">About Me</a></li>
+  <li><a href="#skills">Skills &amp; Experience</a></li>
   <li><a href="#projects">Projects</a></li>
-  <li><a href="#links">Links</a></li>
 {{ end }}
 
 {{ define "main" }}
-<div class="center-window top" id="about">
-  <header>
-    <h2>About Me</h2>
-  </header>
-
+<section id="about">
+  <h2>About Me</h2>
   {{ .Content }}
+</section>
+
+<section id="skills">
+  <h2>Skills &amp; Experience</h2>
 
   {{ partial "skills.html" . }}
-</div>
+</section>
 
-<div class="center-window" id="projects">
-  <header>
-    <h2>Projects</h2>
-  </header>
+<section id="projects">
+  <h2>Projects</h2>
+  <p>This is a selection of my biggest and most recent projects. Click a project to read more.</p>
+  <p>You can see more of my projects in the <a href="/archive">archive</a>.</p>
   <ul class="projects-container">
     {{ range first 8 (sort (where (where .Site.RegularPages "Section" "projects") ".Params.archived" "==" false) ".Params.startDate" "desc") }}
       {{ partial "project-summary.html" . }}
     {{ end }}
   </ul>
-  <p>
-    View more of my projects in the <a href="/archive">archive</a>.
-  </p>
-</div>
-
-<div class="center-window" id="links">
-  <header>
-    <h2>Links</h2>
-  </header>
-  <div class="links">
-    <a href="mailto:contact@jtattersall.net"><i class="fa fa-envelope"></i>Email Me</a>
-    <a href="https://github.com/jamerst"><i class="fab fa-github"></i>My GitHub</a>
-    <a href="https://www.linkedin.com/in/james-tattersall/"><i class="fab fa-linkedin"></i>My LinkedIn</a>
-  </div>
-
-  <p>
-    <a href="https://fontawesome.com/">Site Icons</a><br>
-    <a href="https://meyerweb.com/eric/tools/css/reset/">Eric Meyer's Reset CSS</a>
-  </p>
-</div>
+</section>
 {{ end }}

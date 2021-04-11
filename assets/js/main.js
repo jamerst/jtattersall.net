@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.getElementById("theme-switch")) {
+  const toggle = document.getElementById("theme-switch");
+  if (toggle) {
     let theme = getTheme();
 
     if (theme && theme === "light" || !theme && window.matchMedia("screen and (prefers-color-scheme: light)").matches) {
-      document.getElementById("theme-switch").textContent = "Switch to Dark Theme";
+      toggle.innerHTML = '<i class="fas fa-moon"></i>';
+      toggle.setAttribute("title", "Switch to dark theme");
     } else {
-      document.getElementById("theme-switch").textContent = "Switch to Light Theme";
+      toggle.innerHTML = '<i class="fas fa-sun"></i>';
+      toggle.setAttribute("title", "Switch to light theme");
     }
 
     document.getElementById("theme-switch").addEventListener("click", () => {
@@ -13,12 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
         theme = "dark";
         setTheme(theme);
         document.getElementsByTagName("html")[0].lastChild.insertAdjacentHTML("beforeend", "<link href='/css/main_dark.css' type='text/css' rel='stylesheet'/>");
-        document.getElementById("theme-switch").textContent = "Switch to Light Theme";
+        toggle.innerHTML = '<i class="fas fa-sun"></i>';
+        toggle.setAttribute("title", "Switch to light theme");
       } else {
         theme = "light";
         setTheme(theme);
         document.querySelector("link[rel=stylesheet][href='/css/main_dark.css']").remove();
-        document.getElementById("theme-switch").textContent = "Switch to Dark Theme";
+        toggle.innerHTML = '<i class="fas fa-moon"></i>';
+        toggle.setAttribute("title", "Switch to dark theme");
       }
     });
   }
@@ -27,10 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
     elem.addEventListener("click", event => {
       event.preventDefault();
 
-      if (event.target.parentElement.classList.contains("current-page")) return;
+      if (event.target.parentElement.classList.contains("current")) return;
 
-      document.getElementsByClassName("current-page")[0].classList.remove("current-page");
-      event.target.parentElement.classList.add("current-page");
+      document.getElementsByClassName("current")[0].classList.remove("current");
+      event.target.parentElement.classList.add("current");
 
       document.querySelector(event.target.attributes["href"].value).scrollIntoView({ behavior: "smooth" });
     })

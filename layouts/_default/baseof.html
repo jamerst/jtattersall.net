@@ -20,43 +20,42 @@
 </head>
 
 <body>
-  <header class="main-header">
-    <h1>James Tattersall</h1>
-    <h2>Aspiring Web &amp; Native App Developer</h2>
-    <div class="header-email">
-      <a href="mailto:{{ .Site.Params.contactEmail }}"><i class="fa fa-envelope"></i>{{ .Site.Params.contactEmail }}</a>
+  <header>
+    <div class="top">
+      <h1>James Tattersall</h1>
+      <h2>Aspiring Web &amp; Native App Developer</h2>
+      <hr>
+      <nav>
+        <ul>
+          {{ block "nav" . }}{{ end }}
+          <li class="links">
+            <a href="mailto:contact@jtattersall.net"><i class="fa fa-envelope"></i>Email Me</a>
+            <a href="https://github.com/jamerst"><i class="fab fa-github"></i>My GitHub</a>
+            <a href="https://www.linkedin.com/in/james-tattersall/"><i class="fab fa-linkedin"></i>My LinkedIn</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        {{ block "nav" . }}{{ end }}
-      </ul>
-    </nav>
-  </header>
-
-  <div class="page-content">
-    {{ block "main" . }}{{ end }}
-    <footer>
-      <div class="footer-left">
+    <div class="bottom">
+      <div>
         <i class="far fa-copyright"></i> James Tattersall {{ now.Format "2006" }}
-        <div class="footer-source">
+        <div class="source">
           Site Version: {{ .Site.Params.version }} ({{ now.Format "2006-01-02" }})<br>
           <a href="https://github.com/jamerst/jtattersall.net">Source Code</a>
         </div>
-        <div>
-          <p id="theme-switch"></p>
-        </div>
       </div>
+      <div>
+        <a id="theme-switch" role="button"></a>
+      </div>
+    </div>
+  </header>
 
-      <div class="footer-right">
-        <a href="mailto:{{ .Site.Params.contactEmail }}"><i class="fa fa-envelope"></i>Email Me</a>
-        <a href="https://github.com/jamerst"><i class="fab fa-github"></i>My GitHub</a>
-        <a href="https://www.linkedin.com/in/james-tattersall/"><i class="fab fa-linkedin"></i>My LinkedIn</a>
-      </div>
-    </footer>
-  </div>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
 </body>
 
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Roboto+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Roboto+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
   integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
