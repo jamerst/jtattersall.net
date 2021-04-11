@@ -14,7 +14,7 @@ images: [
     {file: "groups.png", alt: "Group membership"},
     {file: "history.png", alt: "Payment history"}
 ]
-archived: false
+archived: true
 startDate: 2018-02-01
 ---
 

@@ -40,52 +40,88 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(event.target.attributes["href"].value).scrollIntoView({ behavior: "smooth" });
     })
   });
-
-  document.getElementsByTagName("body")[0].addEventListener("click", e => {
-    if (e.target.parentElement.id === "close-button") {
-      document.getElementById("cover").classList.replace("show-cover", "hide-cover");
-      setTimeout(() => document.getElementById("cover").remove(), 300);
-    }
-  });
-
-  [...document.getElementsByClassName("project-entry")].forEach(elem => {
-    elem.addEventListener("click", () => {
-      if (window.matchMedia("only screen and (max-device-width: 480px)").matches) {
-        window.location = elem.dataset.url;
-      } else {
-        document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend",
-          `<div id="cover" class="hide-cover">
-          <div class="page-content-center" id="cover-content"></div>
-          </div>`
-        );
-
-        // small delay before making visible - fade in animation doesn't work otherwise
-        setTimeout(() => document.getElementById("cover").classList.replace("hide-cover", "show-cover"), 50);
-
-        fetch(elem.dataset.url)
-          .then(r => r.text())
-          .then(t => {
-            let temp = document.createElement("span");
-            temp.innerHTML = t;
-            document.getElementById("cover-content").appendChild(temp.getElementsByClassName("center-window")[0]);
-
-            let header = document.querySelector(".page-content-center > .center-window > header");
-            header.insertAdjacentHTML("afterbegin", "<div class='left'></div>");
-            header.insertAdjacentHTML("beforeend", "<div class='right'><div id='close-button' title='Close'><i class='far fa-times-circle'></i></div></div>");
-
-            createGallery();
-          });
-      }
-    });
-  });
-
-  [...document.getElementsByClassName("skill-display")].forEach(elem => {
-    elem.addEventListener("click", (e) => {
-      [...document.getElementsByClassName("skill-open")].forEach(open => { open.classList.remove("skill-open") });
-      e.currentTarget.parentElement.classList.add("skill-open");
-    });
-  })
 });
+
+class Expandable {
+  constructor(elem) {
+    this.elem = elem;
+    this.summary = elem.querySelector("summary");
+    this.content = elem.querySelector(".content");
+
+    this.animation = null;
+    this.isClosing = false;
+    this.isOpening = false;
+
+    this.summary.addEventListener("click", (e) => this.onClick(e));
+  }
+
+  onClick(e) {
+    e.preventDefault();
+
+    const currentlyOpen = document.querySelector("details[open].smooth");
+    if (currentlyOpen) {
+      new Expandable(currentlyOpen).close();
+    }
+
+    if (this.isClosing || !this.elem.open) {
+      this.open();
+    } else if (this.isOpening || this.elem.open) {
+      this.close();
+    }
+  }
+
+  close() {
+    this.isClosing = true;
+
+    const fullHeight = `${this.elem.offsetHeight}px`;
+    const summaryHeight = `${this.summary.offsetHeight}px`;
+    
+    if (this.animation) {
+      this.animation.cancel();
+    }
+
+    this.animation = this.elem.animate({
+      height: [fullHeight, summaryHeight]
+    }, { duration: 250, easing: "ease-out"});
+
+    this.animation.onfinish = () => this.onAnimationFinish(false);
+    this.animation.oncancel = () => this.isClosing = false;
+  }
+
+  open() {
+    this.elem.style.height = `${this.elem.offsetHeight}px`;
+    this.elem.open = true;
+
+    const startHeight = `${this.elem.offsetHeight}px`;
+    const endHeight = `${this.summary.offsetHeight + this.content.offsetHeight}px`;
+
+    window.requestAnimationFrame(() => {
+      this.isExpanding = true;
+
+      if (this.animation) {
+        this.animation.cancel();
+      }
+
+      this.animation = this.elem.animate({
+        height: [startHeight, endHeight]
+      }, { duration: 250, easing: "ease-out"});
+
+      this.animation.onfinish = () => this.onAnimationFinish(true);
+      this.animation.oncancel = () => this.isOpening = false;
+    })
+  }
+
+  onAnimationFinish(open) {
+    this.elem.open = open;
+    this.animation = null;
+    this.isClosing = false;
+    this.isOpening = false;
+
+    this.elem.style.height = "";
+  }
+}
+
+document.querySelectorAll("details.smooth").forEach((elem) => new Expandable(elem));
 
 getTheme = () => {
   let b = document.cookie.match('(^|;)\\s*theme\\s*=\\s*([^;]+)');

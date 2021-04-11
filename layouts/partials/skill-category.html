@@ -1,32 +1,34 @@
 {{/* workaround for sort function being unstable, so can't chain to sort by name then by level */}}
 {{ range seq 5 -1 1 }}
   {{ range sort (where $.skills ".level" "==" .) ".name" }}
-    <li>
-      <div class="skill-display">
-        {{ .name }}
-        <div class="level">
-          {{ range seq .level }}<i class="filled"></i>{{ end }}{{ range seq (sub 5 .level) }}<i class="empty"></i>{{ end }}<i class="fas fa-chevron-down skill-expand"></i>
-        </div>
-      </div>
-      <div class="skill-description">
-        <p>{{ .description | markdownify }}</p>
-
-        {{ $usages := slice }}
-
-        {{ with $id := .id}}
-          {{ range where $.context.Site.RegularPages "Section" "projects" }}
-            {{ if in .Params.skills $id }}
-              {{ $usages = $usages | append (print `<a href="` .Permalink `">` .Title "</a>") }}
+    <li class="skill">
+      <details class="smooth">
+        <summary>
+          {{ .name }}
+          <div class="level">
+            {{ range seq .level }}<i class="filled"></i>{{ end }}{{ range seq (sub 5 .level) }}<i class="empty"></i>{{ end }}<i class="fas fa-chevron-down skill-expand"></i>
+          </div>
+        </summary>
+        <div class="content">
+          <p>{{ .description | markdownify }}</p>
+  
+          {{ $usages := slice }}
+  
+          {{ with $id := .id}}
+            {{ range where $.context.Site.RegularPages "Section" "projects" }}
+              {{ if in .Params.skills $id }}
+                {{ $usages = $usages | append (print `<a href="` .Permalink `">` .Title "</a>") }}
+              {{ end }}
             {{ end }}
           {{ end }}
-        {{ end }}
-
-        {{ if len $usages }}
-          <p>
-            I used {{ .name }} for {{ delimit $usages ", " " and "}}.
-          </p>
-        {{ end }}
-      </div>
+  
+          {{ if len $usages }}
+            <p>
+              I used {{ .name }} for {{ delimit $usages ", " " and "}}.
+            </p>
+          {{ end }}
+        </div>
+      </details>
     </li>
   {{ end }}
 {{ end }}

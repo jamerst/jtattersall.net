@@ -1,15 +1,17 @@
 :root {
     --text: #fff;
+    --text-secondary: #9e9e9e;
     --page-back: #212121;
-    --link-visited: #9E9E9E;
-    --center-window-back: #424242;
-    --skill-hover: #616161;
+    --link: #5C6BC0;
+    --link-hover: #9FA8DA;
+    --link-visited: #7986CB;
+    --skill-hover: #424242;
     --skill-list-mob-sep: #616161;
     --level: #616161;
     --level-filled: #5C6BC0;
     --level-hover: #757575;
-    --project-back: #616161;
-    --project-back-hover: #757575;
+    --project-back: #424242;
+    --project-back-hover: #616161;
     --gallery-back: #616161;
     --footer-links: #9E9E9E;
 }

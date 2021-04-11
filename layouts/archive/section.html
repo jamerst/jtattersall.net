@@ -3,18 +3,14 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="center-window">
-  <header>
-    <h2>{{ .Title }}</h2>
-  </header>
+  <h2>{{ .Title }}</h2>
   {{ .Content }}
-  <div class="projects-container">
+  <ul class="projects">
     {{ $listed := first 8 (sort (where (where .Site.RegularPages "Section" "projects") ".Params.archived" "==" false) ".Params.startDate" "desc") }}
     {{ range sort (where .Site.RegularPages "Section" "projects") ".Params.startDate" "desc" }}
       {{ if not (in $listed .) }}
         {{ partial "project-summary.html" . }}
       {{ end }}
     {{ end }}
-  </div>
-</div>
+  </ul>
 {{ end }}

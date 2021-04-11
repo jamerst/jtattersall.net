@@ -6,7 +6,7 @@ tags: ["Java", "Android", "Magisk"]
 skills: ["java", "android"]
 summaryImage: {file: "NightLightDarkroom.svg", alt: "NightLightDarkroom App Icon"}
 images: []
-archived: false
+archived: true
 startDate: 2019-09-01
 ---
 

@@ -4,7 +4,7 @@
         "id": "git",
         "name": "Git",
         "level": 4,
-        "description": "Git is my version control system of choice. I have used Git for almost every project since first learning about it my first year at university. I like the speed, reliability and complete flexibility, especially compared to competing solutions such as Microsoft TFVC, which I find to be very slow and unreliable."
+        "description": "Git is my version control system of choice. I have used Git for almost every project since first learning about it in my first year at university. I like the speed, reliability and complete flexibility, especially compared to competing solutions such as Microsoft TFVC, which I find to be very slow and unreliable."
       },
       {
         "id": "linux",

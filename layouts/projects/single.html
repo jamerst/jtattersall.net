@@ -3,28 +3,25 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="center-window">
-  <header>
-    <h2>{{ .Title }}</h2>
-  </header>
-  <div class="project-popup-content">
-    {{ .Content }}
+  <h2>{{ .Title }}</h2>
 
-    {{ if .Params.video }}
-      <div class="image-container">
-        <video loop controls src="{{ (.Resources.GetMatch .Params.video.file).Permalink }}" type="{{ .Params.video.mimeType }}" title="{{ .Params.video.alt }}"></video>
-      </div>
-    {{ end }}
+  {{ .Content }}
 
-    {{ if len .Params.images }}
-      <noscript class="image-container">
-        {{ range .Params.images }}
-          {{ if .file }}
-            <img src="{{ ($.Resources.GetMatch .file).Permalink }}" alt="{{ .alt }}">
-          {{ end }}
+  {{ if .Params.video }}
+    <div class="image-container">
+      <video loop controls src="{{ (.Resources.GetMatch .Params.video.file).Permalink }}" type="{{ .Params.video.mimeType }}" title="{{ .Params.video.alt }}"></video>
+    </div>
+  {{ end }}
+
+  {{ if len .Params.images }}
+    <noscript class="image-container">
+      {{ range .Params.images }}
+        {{ if .file }}
+          <img src="{{ ($.Resources.GetMatch .file).Permalink }}" alt="{{ .alt }}">
         {{ end }}
-      </noscript>
-    {{ end }}
-  </div>
+      {{ end }}
+    </noscript>
+  {{ end }}
+
 </div>
 {{ end }}

@@ -27,31 +27,27 @@
       <hr>
       <nav>
         <ul>
-          {{ block "nav" . }}{{ end }}
-          <li class="links">
-            <a href="mailto:contact@jtattersall.net"><i class="fa fa-envelope"></i>Email Me</a>
-            <a href="https://github.com/jamerst"><i class="fab fa-github"></i>My GitHub</a>
-            <a href="https://www.linkedin.com/in/james-tattersall/"><i class="fab fa-linkedin"></i>My LinkedIn</a>
-          </li>
+          {{ block "nav" .}}{{ end }}
         </ul>
       </nav>
+      <hr>
+      <div class="links">
+        <a href="mailto:contact@jtattersall.net"><i class="fa fa-envelope"></i>Email Me</a>
+        <a href="https://github.com/jamerst" target="_blank" rel="noreferrer noopener"><i class="fab fa-github"></i>My GitHub</a>
+        <a href="https://www.linkedin.com/in/james-tattersall/" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin"></i>My LinkedIn</a>
+      </div>
     </div>
     <div class="bottom">
-      <div>
-        <i class="far fa-copyright"></i> James Tattersall {{ now.Format "2006" }}
-        <div class="source">
-          Site Version: {{ .Site.Params.version }} ({{ now.Format "2006-01-02" }})<br>
-          <a href="https://github.com/jamerst/jtattersall.net">Source Code</a>
-        </div>
-      </div>
-      <div>
-        <a id="theme-switch" role="button"></a>
-      </div>
+      <a id="theme-switch" role="button"></a>
     </div>
   </header>
 
   <main>
     {{ block "main" . }}{{ end }}
+    <footer>
+      <p><i class="far fa-copyright"></i> James Tattersall {{ now.Format "2006" }}</p>
+      <p>Version {{ .Site.Params.version }} ({{ now.Format "2006-01-02" }})</p>
+    </footer>
   </main>
 </body>
 

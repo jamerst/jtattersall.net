@@ -9,18 +9,18 @@
   <h2>About Me</h2>
   {{ .Content }}
 </section>
-
+<hr>
 <section id="skills">
   <h2>Skills &amp; Experience</h2>
-
+  <p>I am always keen to learn new technologies and skills, see the lists below for some of my existing skills and how confident I am with them. Click a skill to read more about my experience.</p>
   {{ partial "skills.html" . }}
 </section>
-
+<hr>
 <section id="projects">
   <h2>Projects</h2>
   <p>This is a selection of my biggest and most recent projects. Click a project to read more.</p>
-  <p>You can see more of my projects in the <a href="/archive">archive</a>.</p>
-  <ul class="projects-container">
+  <p>You can find more of my older and smaller projects in the <a href="/archive">archive</a>.</p>
+  <ul class="projects">
     {{ range first 8 (sort (where (where .Site.RegularPages "Section" "projects") ".Params.archived" "==" false) ".Params.startDate" "desc") }}
       {{ partial "project-summary.html" . }}
     {{ end }}

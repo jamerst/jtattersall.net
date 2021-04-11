@@ -1,43 +1,21 @@
-<li class="project-entry" data-url="{{ .Permalink }}">
-  <div class="project-summary">
+<li>
+  <a href="{{.Permalink}}" class="project-entry">
     <div class="project-img">
       {{ if .Params.summaryImage.file }}
         <img src="{{ (.Resources.GetMatch .Params.summaryImage.file).Permalink }}" alt="{{ .Params.summaryImage.alt }}" loading="lazy">
       {{ end }}
     </div>
     <div class="project-content">
-      <div class="text">
-        <h2>{{ .Title }}</h2>
-        <h3><i class='far fa-calendar-alt'></i>{{ .Params.duration }}</h3>
-        {{ .Description }}
-        <noscript><a href="{{.Permalink}}">Read more..</a></noscript>
-      </div>
-      <div class="project-tags">
-        <ul>
-          {{ range .Params.tags }}
-            <li>{{ . }}</li>
-          {{ end }}
-        </ul>
-      </div>
+      <h2>{{ .Title }}</h2>
+      <h3><i class='far fa-calendar-alt'></i>{{ .Params.duration }}</h3>
+      {{ .Description }}
     </div>
-  </div>
-  <div class="project-collapse">
-    {{ .Content }}
-
-    {{ if .Params.video }}
-      <div class="image-container">
-        <video loop controls src="{{ (.Resources.GetMatch .Params.video.file).Permalink }}" type="{{ .Params.video.mimeType }}" title="{{ .Params.video.alt }}"></video>
-      </div>
-    {{ end }}
-
-    {{ if len .Params.images }}
-      <noscript class="image-container">
-        {{ range .Params.images }}
-          {{ if .file }}
-            <img src="{{ ($.Resources.GetMatch .file).Permalink }}" alt="{{ .alt }}">
-          {{ end }}
+    <div class="project-tags">
+      <ul>
+        {{ range .Params.tags }}
+          <li>{{ . }}</li>
         {{ end }}
-      </noscript>
-    {{ end }}
-  </div>
+      </ul>
+    </div>
+  </a>
 </li>
