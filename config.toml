@@ -4,5 +4,5 @@ title = "James Tattersall"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
-    version = "3.0.0"
+    version = "3.0.1"
     contactEmail = "contact@jtattersall.net"

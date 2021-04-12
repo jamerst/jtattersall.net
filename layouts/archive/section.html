@@ -6,7 +6,7 @@
   <h2>{{ .Title }}</h2>
   {{ .Content }}
   <ul class="projects">
-    {{ $listed := first 8 (sort (where (where .Site.RegularPages "Section" "projects") ".Params.archived" "==" false) ".Params.startDate" "desc") }}
+    {{ $listed := first 6 (sort (where (where .Site.RegularPages "Section" "projects") ".Params.archived" "==" false) ".Params.startDate" "desc") }}
     {{ range sort (where .Site.RegularPages "Section" "projects") ".Params.startDate" "desc" }}
       {{ if not (in $listed .) }}
         {{ partial "project-summary.html" . }}

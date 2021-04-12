@@ -21,7 +21,7 @@
   <p>This is a selection of my biggest and most recent projects. Click a project to read more.</p>
   <p>You can find more of my older and smaller projects in the <a href="/archive">archive</a>.</p>
   <ul class="projects">
-    {{ range first 8 (sort (where (where .Site.RegularPages "Section" "projects") ".Params.archived" "==" false) ".Params.startDate" "desc") }}
+    {{ range first 6 (sort (where (where .Site.RegularPages "Section" "projects") ".Params.archived" "==" false) ".Params.startDate" "desc") }}
       {{ partial "project-summary.html" . }}
     {{ end }}
   </ul>
