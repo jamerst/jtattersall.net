@@ -2,8 +2,8 @@
 title: OpenLD
 duration: October 2019 - May 2020
 description: A web-based system for creating lighting designs collaboratively with live-editing functionality. Created as my final year project at the University of Warwick.
-tags: ["C#", "ASP.NET Core", "React.js"]
-skills: ["c#", "aspnetcore", "docker", "react", "signalr", "js", "sql"]
+tags: ["C#", "ASP.NET Core", "React"]
+skills: ["c#", "aspnetcore", "docker", "react", "signalr", "js", "sql", "ef"]
 summaryImage: {file: "openld.svg", alt: "OpenLD Logo"}
 images: [
     {file: "openld_home.png", alt: "OpenLD Home"},
@@ -27,8 +27,7 @@ Lighting design is the process of arranging lights to enhance performances such 
 work with the university technical theatre society, I realised a problem with the existing tools that lighting
 designers were using - they do not allow easy collaboration. Creating a design often requires collaboration with
 other team members and specialists in areas such as rigging or electrical, however existing solutions do not
-easily
-permit this. With existing solutions, designs are created offline on the designer's computer, and so are not
+easily permit this. With existing solutions, designs are created offline on the designer's computer, and so are not
 easily accessible by others on-demand. This means that multiple people cannot work on a drawing simultaneously:
 they must instead wait to receive a copy from the designer in order to contribute to it.
 
@@ -39,9 +38,9 @@ which are notoriously difficult to master due to the complexity of their user in
 this by utilising common design patterns, ensuring UI controls are well-sized and grouped, and ensuring that
 controls to interact with the drawing are visible, and not hidden inside menu systems.
 
-OpenLD is written using C# and JavaScript, consisting of an ASP.NET Core back-end and React.js front-end. This
+OpenLD is written using C# and JavaScript, consisting of an ASP.NET Core back-end and React front-end. This
 was by far the biggest project I'd undertaken so far, so it was a huge challenge, especially when implementing
-the edit synchronisation features. This was my first major project using ASP.NET Core and React.js, so this
+the edit synchronisation features. This was my first major project using ASP.NET Core and React, so this
 improved my experience and confidence with both significantly. I also used Docker to containerise the system for
 easy development and deployment by ensuring a consistent environment with all dependencies properly configured
 and installed.

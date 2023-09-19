@@ -23,6 +23,12 @@
         "name": "Docker",
         "level": 3,
         "description": "I have used Docker on a few projects involving web apps. I find it to be extremely useful for both deployment and development as the containers allow dependencies to be built-in and preconfigured, avoiding the need for manually configuring dependencies wherever a project needs to be run. I would like to gain more experience using Docker for larger projects, and utilising it in Continuous Integration."
+      },
+      {
+        "id": "azure",
+        "name": "Azure",
+        "level": 2,
+        "description": "I have used Azure in my day job, where it is used for hosting. I have experience with basic networking and virtual machine management in Azure, and experience with other areas such as Azure Maps, Logic Apps and Active Directory."
       }
     ]
 }

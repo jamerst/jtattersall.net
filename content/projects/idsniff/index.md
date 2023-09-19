@@ -6,7 +6,7 @@ tags: ["C", "Multithreading", "Networking"]
 skills: ["c"]
 summaryImage: {file: "idsniff.webp", alt: "Sample program output"}
 images: [{file: "idsniff.webp", alt: "Sample program output"}]
-archived: false
+archived: true
 startDate: 2018-10-01
 ---
 

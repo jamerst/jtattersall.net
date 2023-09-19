@@ -7,52 +7,52 @@
         "description": "I am fluent in HTML and CSS, and feel very confident working with them. I pride myself in building pages accurately to concepts and implementing best practices to ensure good UX and accessibility."
       },
       {
-        "id": "c",
-        "name": "C",
-        "level": 4,
-        "description": "I have used C to create non-trivial programs as part of university modules. I have experience implementing techniques such as multithreading using POSIX threads, and vectorisation using AVX."
-      },
-      {
         "id": "c#",
         "name": "C#",
-        "level": 4,
+        "level": 5,
         "description": "C# is my current general-purpose language of choice. I enjoy building both web and native applications using it due to the huge feature set and uncompromising design. As a Linux user, I particularly like using C# with .NET Core thanks to the cross-platform support."
-      },
-      {
-        "id": "java",
-        "name": "Java",
-        "level": 4,
-        "description": "I have experience using Java in a variety of applications, including simple web and Android apps."
       },
       {
         "id": "js",
         "name": "JavaScript & TypeScript",
         "level": 4,
-        "description": "I enjoy writing modern JavaScript (or preferably TypeScript) for modern frameworks such as React.js. I prefer to use TypeScript as types allow the code to be more self-documenting, and the compile-time type checking helps to reduce bugs."
-      },
-      {
-        "id": "php",
-        "name": "PHP",
-        "level": 4,
-        "description": "I have experience writing web applications using PHP, both with and without frameworks. Although the language is not my favourite by design I appreciate how fast it is to create web applications, and newer language versions are improving it."
+        "description": "I enjoy writing modern JavaScript (or preferably TypeScript) for modern frameworks such as React. I prefer to use TypeScript as types allow the code to be more self-documenting, and the compile-time type checking helps to reduce bugs."
       },
       {
         "id": "sql",
         "name": "SQL",
         "level": 4,
-        "description": "I am able to write and understand complex SQL queries, and I have the major databases, including PostgreSQL, MySQL, SQL Server and SQLite. I particularly enjoy writing SQL queries to optimise for speed and efficiency"
+        "description": "I am able to write and understand complex SQL queries, and I have worked with all the major databases, including PostgreSQL, MySQL, SQL Server and SQLite. I particularly enjoy writing SQL queries to optimise for speed and efficiency"
       },
       {
-        "id": "cpp",
-        "name": "C++",
+        "id": "java",
+        "name": "Java",
         "level": 3,
-        "description": "I have some experience writing in C++ from university coursework. I enjoy the potential speed and extra features over C, but I found it quite difficult to learn due to the many nuances and rabbit hole of features and best practices."
+        "description": "I have experience using Java in a variety of applications, including simple web and Android apps."
+      },
+      {
+        "id": "php",
+        "name": "PHP",
+        "level": 3,
+        "description": "I have experience writing web applications using PHP, both with and without frameworks. Although the language is not my favourite by design I appreciate how fast it is to create web applications, and newer language versions are improving it."
       },
       {
         "id": "python",
         "name": "Python",
         "level": 3,
         "description": "I have experience using Python to write simple applications, including web apps using Django. I mainly use Python for writing simple scripts/utilities for tasks such as web scraping and automation."
+      },
+      {
+        "id": "c",
+        "name": "C",
+        "level": 2,
+        "description": "I have used C to create non-trivial programs as part of university modules. I have experience implementing techniques such as multithreading using POSIX threads, and vectorisation using AVX."
+      },
+      {
+        "id": "cpp",
+        "name": "C++",
+        "level": 2,
+        "description": "I have some experience writing in C++ from university coursework. I enjoy the potential speed and extra features over C, but I found it quite difficult to learn due to the many nuances and rabbit hole of features and best practices."
       }
     ]
   }

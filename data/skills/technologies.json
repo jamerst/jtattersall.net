@@ -1,0 +1,28 @@
+{
+  "skills": [
+    {
+      "id": "aspnetcore",
+      "name": "ASP.NET Core",
+      "level": 4,
+      "description": "ASP.NET Core is my current back-end web framework of choice. I have built several applications using it, including my final year project. I particularly like the modern design using Dependency Injection, plethora of features and cross-platform support."
+    },
+    {
+      "id": "ef",
+      "name": "Entity Framework",
+      "level": 4,
+      "description": "Entity Framework is my preferred method for interacting with databases from C#. I have used Entity Framework Core in several applications, and the older Entity Framework 6 in my day job. I like how queries can be written entirely in C#, and the powerful features available, though at the expense of some performance."
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "level": 4,
+      "description": "React is my current front-end framework of choice. I have used it to build several applications, most notably the front-end for my final year project. I like how it reduces the amount of boilerplate code significantly, and avoids tedious and error-prone manual DOM manipulation."
+    },
+    {
+      "id": "vue",
+      "name": "Vue",
+      "level": 3,
+      "description": "I have some experience using Vue in my day job, where I have used to implement complex interactive features in web apps. I like it for the same reasons as React - reduced boilerplate and avoiding DOM manipulation. I particularly like the input binding features, which are very useful for further eliminating boilerplate in simple forms."
+    }
+  ]
+}
