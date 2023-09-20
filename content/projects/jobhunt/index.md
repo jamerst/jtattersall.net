@@ -31,7 +31,7 @@ I decided that OData was a good fit for what I wanted to accomplish because it r
 
 With the back-end of the system mostly handled, my attention turned to the front-end. Unfortunately this is where things got much more complicated as I was unable to find an existing solution for constructing OData queries with a user interface. Due to this I decided to try building my own interface to build the queries and display the results in a table.
 
-This turned out to be my biggest challenge yet, and one that I vastly underestimated. I did eventually succeed though, and this interface became ODataGrid. For more information on the building of ODataGrid see the dedicated project page.
+This turned out to be my biggest challenge yet, and one that I vastly underestimated. I did eventually succeed though, and this interface became [ODataGrid](https://github.com/jamerst/o-data-grid). For more information on the building of ODataGrid see the [dedicated project page]({{< ref "/projects/o-data-grid" >}}).
 
 ### Page Change Tracking
 I discovered quite early on that there was a slight flaw with my job collecting strategy: it was only able to collect jobs posted on Indeed. This is a slight flaw because some companies don't post jobs on Indeed, instead choosing to post jobs on dedicated pages of their website or on their own recruitment sites.
@@ -43,7 +43,7 @@ To address this I switched to a more advanced comparison strategy using the [Ang
 ### Duplicate Jobs
 Another thing I noticed as time went on was the large number of duplicate jobs posted. Currently of the ~9500 jobs archived by my JobHunt instance, a whopping 52% are duplicates.
 
-I decided that I wanted to automatically identify the duplicates in order to have a link between them, however this isn't as simple as you may think at a glance. This is because the posted jobs usually aren't completely identical - they have slight differences such as dates, salaries or job title. This means that a different comparison method needs to be used - something that give a quantitative value for the similarity of two pieces of text.
+I decided that I wanted to automatically identify the duplicates in order to have a link between them, however this isn't as simple as you may think at a glance. This is because the posted jobs usually aren't completely identical - they have slight differences such as dates, salaries or job title. This means that a different comparison method needs to be used - something that can give a quantitative value for the similarity of two pieces of text.
 
 Enter [trigrams](https://en.wikipedia.org/wiki/Trigram_search)! I hadn't encountered trigrams before, for anyone else who hasn't they essentially split a string of text into substrings of 3 characters, then computing the distinct set of all these substrings. A quantitative value for similarity can then be found by comparing the contents of these sets.
 

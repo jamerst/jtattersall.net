@@ -79,7 +79,7 @@ p:last-child {
 
 a, a:link {
     transition: color .1s ease;
-    text-decoration: none;
+    text-decoration: underline;
 
     color: var(--link);
 }
@@ -252,6 +252,7 @@ nav ul li {
 
 nav ul li a {
     padding: .3em;
+    text-decoration: none !important;
 }
 
 nav li:hover {
@@ -635,6 +636,7 @@ ul.projects > li {
     background-color: var(--project-back);
     box-shadow: 0 .2em .4em 0 rgba(0, 0, 0, .50);
     transition: .3s !important;
+    text-decoration: none !important;
 }
 
 .project-entry:hover {
