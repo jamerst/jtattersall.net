@@ -45,11 +45,7 @@ improved my experience and confidence with both significantly. I also used Docke
 easy development and deployment by ensuring a consistent environment with all dependencies properly configured
 and installed.
 
-The source code for OpenLD is available on my [GitHub](https://github.com/jamerst/openld).
-
-A demo of the final working prototype is also available at [https://www.openld.jtattersall.net/](https://www.openld.jtattersall.net/).
-
-_Please note that this demo is hosted on a free, very low-power, Google Cloud Platform instance, which
-affects performance noticeably, particularly for response times. <br>I recommend using a Chromium-based browser for performance reasons._
+The source code for OpenLD is available on my [GitHub](https://github.com/jamerst/openld). This project is not actively
+maintained, so the live demo is no longer available.
 
 Screenshots of the system, an exported drawing, and related materials are shown below.
